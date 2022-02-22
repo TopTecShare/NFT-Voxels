@@ -5,9 +5,15 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: 50px 50px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+@font-face {
+  font-family: "Kasumi";
+  src: local("Kasumi"), url(./fonts/Kasumi.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "Agency";
+  src: local("Agency"), url(./fonts/Agency.ttf) format("truetype");
 }
