@@ -8,6 +8,10 @@ body {
   padding: 50px 50px;
   background: url(./img/Background.png);
   background-size: cover;
+<<<<<<< HEAD
+=======
+  /* height: 100vh; */
+>>>>>>> 72ffba58e08cfb66858161b2359d30ec7830dde7
   background-attachment: fixed;
 }
 
