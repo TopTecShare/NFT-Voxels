@@ -1,14 +1,11 @@
 .voxels {
-  /* display: flex; */
+  display: flex;
   justify-content: center;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
   z-index: 10;
 }
 
 .voxels img {
-  width: 100%;
+  width: 80%;
 }
 
 .mint-action {
@@ -16,36 +13,79 @@
 }
 
 .price {
-  font-size: 32px;
-  margin-bottom: 0;
+  font-size: 35px;
+  margin: 6px;
 }
 
 .minus {
   padding: 2px 17px;
   background: rgb(189, 189, 189);
   color: black;
-  font-size: 30px;
+  font-size: 32px;
 }
 
 .value {
-  padding: 2px 50px;
+  padding: 2px 70px;
   border: 1px solid white;
-  margin: 0 5px;
-  font-size: 30px;
+  margin: 0px 5px;
+  font-size: 32px;
 }
 
 .plus {
   padding: 2px 16px;
   background: rgb(189, 189, 189);
   color: black;
-  font-size: 30px;
+  font-size: 32px;
 }
 
 .mint-button {
-  padding: 10px 89px;
+  margin: 5px 0;
+  padding: 10px 100px;
+  font-size: 20px;
 }
 
 .eligible {
-  font-size: 30px;
+  font-size: 32px;
   color: grey;
+  margin: 5px;
+}
+
+@media (max-width: 360px) {
+  .price {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+
+  .minus {
+    padding: 2px 15px;
+    background: rgb(189, 189, 189);
+    color: black;
+    font-size: 32px;
+  }
+
+  .value {
+    padding: 2px 30px;
+    border: 1px solid white;
+    margin: 0px 5px;
+    font-size: 32px;
+  }
+
+  .plus {
+    padding: 2px 14px;
+    background: rgb(189, 189, 189);
+    color: black;
+    font-size: 32px;
+  }
+
+  .mint-button {
+    margin: 5px 0;
+    padding: 10px 56px;
+    font-size: 20px;
+  }
+
+  .eligible {
+    font-size: 20px;
+    color: grey;
+    margin: 5px;
+  }
 }

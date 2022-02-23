@@ -7,9 +7,17 @@ export default function () {
         <img src={logo} className="logo" />
       </div>
       <div className="header-r">
-        <a href="#" className="connect-wallet kasumi ">
+        {/* <a href="#" className="connect-wallet kasumi ">
           <span>CONNECT WALLET</span>
-        </a>
+        </a> */}
+        <div className="wallet-info">
+          <div>
+            <span className="agency balance">Balance: 0.5184ETH</span>
+          </div>
+          <div>
+            <span className="agency balance">0x2134...6D921</span>
+          </div>
+        </div>
       </div>
     </header>
   )

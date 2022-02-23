@@ -1,0 +1,9 @@
+.presalewait {
+  padding: 140px 0 0 0;
+}
+
+@media (max-width: 1024px) {
+  .presalewait {
+    padding: 150px 0;
+  }
+}

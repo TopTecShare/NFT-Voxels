@@ -1,9 +1,11 @@
-import Cube from "../components/cube"
+import CubeMint from "../components/cubemint"
+
+import "../styles/presalewait.css"
 
 export default function () {
   return (
     <div className="presalewait">
-      <Cube />
+      <CubeMint />
     </div>
   )
 }

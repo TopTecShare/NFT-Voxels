@@ -1,0 +1,31 @@
+.pub-content p {
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.pub-content .Countdown {
+  justify-content: center;
+}
+
+.pub-eligible {
+  color: black;
+  font-size: 30px;
+  background-color: rgb(180, 180, 180);
+  margin: 15px;
+  width: 380px;
+  margin: 40px auto;
+}
+
+@media (max-width: 414px) {
+  .pub-eligible {
+    font-size: 24px;
+    width: 240px;
+  }
+}
+
+@media (max-width: 280px) {
+  .pub-eligible {
+    font-size: 20px;
+    width: 180px;
+  }
+}

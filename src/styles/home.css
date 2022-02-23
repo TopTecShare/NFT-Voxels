@@ -1,4 +1,4 @@
-.home {
+/* .cube {
   display: flex;
   justify-content: center;
   position: absolute;
@@ -8,8 +8,8 @@
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   z-index: 10;
-}
+} */
 
-.home img {
-  width: 100%;
+.cube img {
+  width: 80%;
 }

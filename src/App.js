@@ -12,8 +12,8 @@ function App() {
     <div className="App">
       {/* <Home /> */}
       {/* <PresaleMint /> */}
-      <PresaleWait />
-      <PublicSaleMint />
+      {/* <PresaleWait /> */}
+      {/* <PublicSaleMint /> */}
       <Staking />
       <Burning />
     </div>

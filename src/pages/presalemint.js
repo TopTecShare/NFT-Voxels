@@ -1,5 +1,5 @@
 import CountDown from "../components/countdown"
-import Cube from "../components/cube"
+import CubeMint from "../components/cubemint"
 
 import "../styles/presalemint.css"
 
@@ -11,7 +11,7 @@ export default function () {
         <p className="agency pre-content">PUBLIC SALE WILL OPEN IN</p>
         <CountDown date="2022-02-28" />
       </div>
-      <Cube />
+      <CubeMint />
     </div>
   )
 }

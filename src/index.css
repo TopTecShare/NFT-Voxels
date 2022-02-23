@@ -5,13 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  padding: 50px 50px;
+  padding: 50px 50px 0 50px;
   background: url(./img/Background.png);
   background-size: cover;
-<<<<<<< HEAD
-=======
-  /* height: 100vh; */
->>>>>>> 72ffba58e08cfb66858161b2359d30ec7830dde7
   background-attachment: fixed;
 }
 
@@ -35,4 +31,16 @@ body {
 
 .flex {
   display: flex;
+}
+
+.cube {
+  /* display: flex; */
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 10;
 }
