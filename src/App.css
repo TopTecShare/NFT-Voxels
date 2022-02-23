@@ -1,17 +1,22 @@
 body {
   background-color: #171516;
-  color: #b9a7ee;
+  color: white;
   font-size: 18px;
   line-height: 1.4;
 }
 
 .App {
   text-align: center;
-  margin: 160px 0;
 }
 
 .mobile-style {
   display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+  .pc-style {
+    display: none;
+  }
 }
 
 header {
@@ -29,10 +34,6 @@ header {
   position: fixed;
   top: 40px;
   right: 50px;
-}
-
-.header-l {
-  margin: 0 40px;
 }
 
 header img {
@@ -98,5 +99,11 @@ footer img {
 @media (max-width: 768px) {
   footer img {
     width: 80%;
+  }
+}
+
+@media (max-width: 412px) {
+  .header-l {
+    padding: 0 40px;
   }
 }

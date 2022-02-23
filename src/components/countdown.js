@@ -90,33 +90,27 @@ class Countdown extends Component {
     const countDown = this.state
 
     return (
-      <div className="Countdown">
+      <div className="Countdown kasumi">
         <span className="Countdown-col">
-          <span className="Countdown-col-element">
-            <strong>{this.addLeadingZeros(countDown.days)}</strong>
-            <span>{countDown.days === 1 ? "Day" : "Days"}</span>
-          </span>
+          {this.addLeadingZeros(countDown.days)}
         </span>
 
-        <span className="Countdown-col">
-          <span className="Countdown-col-element">
-            <strong>{this.addLeadingZeros(countDown.hours)}</strong>
-            <span>Hours</span>
-          </span>
-        </span>
+        <span className="Countdown-col">:</span>
 
         <span className="Countdown-col">
-          <span className="Countdown-col-element">
-            <strong>{this.addLeadingZeros(countDown.min)}</strong>
-            <span>Min</span>
-          </span>
+          {this.addLeadingZeros(countDown.hours)}
         </span>
 
+        <span className="Countdown-col">:</span>
+
         <span className="Countdown-col">
-          <span className="Countdown-col-element">
-            <strong>{this.addLeadingZeros(countDown.sec)}</strong>
-            <span>Sec</span>
-          </span>
+          {this.addLeadingZeros(countDown.min)}
+        </span>
+
+        <span className="Countdown-col">:</span>
+
+        <span className="Countdown-col">
+          {this.addLeadingZeros(countDown.sec)}
         </span>
       </div>
     )

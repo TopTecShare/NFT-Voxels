@@ -1,0 +1,51 @@
+.voxels {
+  /* display: flex; */
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.voxels img {
+  width: 100%;
+}
+
+.mint-action {
+  justify-content: center;
+}
+
+.price {
+  font-size: 32px;
+  margin-bottom: 0;
+}
+
+.minus {
+  padding: 2px 17px;
+  background: rgb(189, 189, 189);
+  color: black;
+  font-size: 30px;
+}
+
+.value {
+  padding: 2px 50px;
+  border: 1px solid white;
+  margin: 0 5px;
+  font-size: 30px;
+}
+
+.plus {
+  padding: 2px 16px;
+  background: rgb(189, 189, 189);
+  color: black;
+  font-size: 30px;
+}
+
+.mint-button {
+  padding: 10px 89px;
+}
+
+.eligible {
+  font-size: 30px;
+  color: grey;
+}
