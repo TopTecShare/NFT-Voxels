@@ -5,9 +5,17 @@ import opensea from "../img/Twitter.png"
 export default function () {
   return (
     <footer>
-      <img src={twitter} />
-      <img src={discord} />
-      <img src={opensea} />
+      <div>
+        <a href="#">
+          <img src={twitter} />
+        </a>
+        <a href="#">
+          <img src={discord} />
+        </a>
+        <a href="#">
+          <img src={opensea} />
+        </a>
+      </div>
     </footer>
   )
 }

@@ -5,7 +5,9 @@ import "../styles/home.css"
 export default function () {
   return (
     <div className="home">
-      <img src={voxels} />
+      <div>
+        <img src={voxels} />
+      </div>
     </div>
   )
 }

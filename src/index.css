@@ -8,6 +8,8 @@ body {
   padding: 50px 50px;
   background: url(./img/Background.png);
   background-size: cover;
+  height: 100vh;
+  background-attachment: fixed;
 }
 
 @font-face {
@@ -18,4 +20,12 @@ body {
 @font-face {
   font-family: "Agency";
   src: local("Agency"), url(./fonts/Agency.ttf) format("truetype");
+}
+
+.kasumi {
+  font-family: "Kasumi";
+}
+
+.agency {
+  font-family: "Agency";
 }
