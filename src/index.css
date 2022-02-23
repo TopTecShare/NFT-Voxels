@@ -8,7 +8,7 @@ body {
   padding: 50px 50px;
   background: url(./img/Background.png);
   background-size: cover;
-  height: 100vh;
+  /* height: 100vh; */
   background-attachment: fixed;
 }
 
