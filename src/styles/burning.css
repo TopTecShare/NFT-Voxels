@@ -1,0 +1,202 @@
+.voxel-box {
+  border: 2px solid white;
+  padding: 30px;
+  width: 60%;
+  margin: 30px auto;
+  background-color: rgb(17, 17, 17);
+}
+
+.voxel-box-title {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.voxel-box-title .balance {
+  color: white;
+  margin: 0 30px 0 0;
+}
+
+.refresh {
+  width: 75px;
+  height: 75px;
+}
+
+.section > p {
+  text-align: left;
+  margin: 0 0 0 20px;
+  font-family: "Kasumi";
+  font-size: 30px;
+}
+
+.voxels-element {
+  position: relative;
+  margin: 20px;
+}
+
+.voxel-pic {
+  width: 150px;
+  background-color: rgb(51, 51, 51);
+  padding: 20px 25px;
+  z-index: 1;
+}
+
+.voxel-letter {
+  position: relative;
+  text-align: center;
+  justify-content: center;
+  font-family: "Agency";
+  font-size: 28px;
+  z-index: 10;
+}
+
+.hide {
+  display: none;
+}
+
+.select-box {
+  width: 200px;
+  height: 270px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 5;
+}
+
+.select-cube {
+  font-size: 30px;
+}
+
+.cost-cube {
+  color: grey;
+  font-size: 24px;
+}
+
+@media (max-width: 1023px) {
+  .burning {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 916px) {
+  .voxel-box-title {
+    justify-content: center;
+  }
+
+  .voxel-sections {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .voxel-sections .flex {
+    display: inline;
+  }
+
+  .section > p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .voxel-box-title .balance {
+    font-size: 24px;
+  }
+
+  .voxel-box-title img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .section {
+    margin-top: 20px;
+  }
+
+  .section > p {
+    font-size: 24px;
+  }
+
+  .voxel-letter {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 414px) {
+  .voxel-box-title .balance {
+    font-size: 18px;
+  }
+
+  .voxel-box-title img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .section {
+    margin-top: 20px;
+  }
+
+  .section > p {
+    font-size: 18px;
+  }
+
+  .voxel-letter {
+    font-size: 16px;
+  }
+
+  .voxel-pic {
+    width: 100px;
+    height: 120px;
+  }
+
+  .voxel-box .balance {
+    font-size: 16px;
+  }
+
+  .select-cube {
+    font-size: 16px;
+  }
+
+  .cost-cube {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 414px) {
+  .voxel-box-title .balance {
+    font-size: 18px;
+  }
+
+  .voxel-box-title img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .section {
+    margin-top: 20px;
+  }
+
+  .section > p {
+    font-size: 18px;
+  }
+
+  .voxel-letter {
+    font-size: 16px;
+  }
+
+  .voxel-pic {
+    width: 80px;
+    height: 96px;
+  }
+
+  .voxel-box .balance {
+    font-size: 14px;
+  }
+
+  .select-cube {
+    font-size: 16px;
+  }
+
+  .cost-cube {
+    font-size: 14px;
+  }
+}

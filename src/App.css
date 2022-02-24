@@ -17,6 +17,10 @@ body {
   display: flex;
 }
 
+.logo {
+  width: 80%;
+}
+
 @media only screen and (max-width: 1024px) {
   .pc-style {
     display: none;
@@ -44,9 +48,6 @@ header {
   font-size: 30px;
   margin-left: 50px;
   color: grey;
-}
-header img {
-  width: 100%;
 }
 
 .connect-wallet {
@@ -81,7 +82,7 @@ footer a {
   margin: 0 15px;
 }
 footer img {
-  width: 100%;
+  width: 80%;
 }
 
 @media (max-width: 1024px) {

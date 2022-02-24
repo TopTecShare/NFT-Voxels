@@ -1,0 +1,196 @@
+.burning-staking-btn {
+  font-size: 32px;
+  margin: 0 50px;
+}
+
+.burning-staking-btn p {
+  margin: 10px 0;
+}
+
+.grey-color {
+  color: grey;
+}
+
+.white-color {
+  color: white;
+}
+
+.burning-staking-btn .line {
+  width: 120px;
+  margin: 0 auto;
+  border-color: grey;
+}
+
+.staking .voxel-box {
+  margin-top: 30px;
+}
+
+.stake .voxel-box-title {
+  margin: 20px 0 0 0;
+}
+
+.staking .refresh {
+  position: absolute;
+  margin-top: 20px;
+}
+
+.staking-nav {
+  justify-content: center;
+  margin-top: 80px;
+}
+
+.staking-nav a {
+  text-decoration: none;
+}
+
+.stake-nav a {
+  text-decoration: none;
+  width: 30%;
+}
+
+.stake-nav {
+  margin: -32px 0 0 -30px;
+}
+
+.stake-nav-btn {
+  color: black;
+  background-color: grey;
+  padding: 8px 0;
+  font-size: 20px;
+  border: 2px solid white;
+  /* border-left: transparent; */
+}
+
+.stake-nav-btn-active {
+  padding: 8px 0;
+  font-size: 20px;
+  background-color: rgb(17, 17, 17);
+  color: white;
+
+  border-right: 2px solid white;
+  border-top: 2px solid white;
+}
+
+.staking .voxel-sections {
+  margin-top: 120px;
+}
+
+.claim {
+  height: 500px;
+  padding-top: 260px;
+}
+
+.claim-content {
+  margin: 20px 0;
+}
+
+.claim-content p {
+  font-size: 28px;
+  margin: 0;
+}
+
+.staking .line {
+  margin: 30px auto;
+  width: 150px;
+}
+
+.staking .bar {
+  margin-bottom: 70px;
+}
+
+.show-stake .mint-button {
+  background-color: grey;
+  color: black;
+}
+
+.show-claim .mint-button {
+  background-color: grey;
+  color: black;
+}
+
+@media (max-width: 1600px) {
+  .staking .refresh {
+    width: 50px;
+    height: 50px;
+    margin: 5px 0 0 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .staking .stake-nav {
+    display: block;
+    margin: 0;
+  }
+
+  .staking-nav {
+    margin-top: 120px;
+  }
+
+  .stake-nav a div {
+    width: 100%;
+  }
+
+  .staking .voxel-box {
+    margin-top: 30px;
+    padding: 0;
+  }
+
+  .staking .refresh {
+    margin: -70px 0px 0 13px;
+  }
+
+  .stake-nav-btn {
+    color: black;
+    background-color: grey;
+    padding: 8px 0;
+    font-size: 20px;
+    border-left: transparent;
+    border-top: transparent;
+  }
+
+  .stake-nav-btn-active {
+    padding: 8px 0;
+    font-size: 20px;
+    background-color: rgb(17, 17, 17);
+    color: white;
+    border-bottom: 2px solid white;
+    border-top: transparent;
+  }
+
+  .staking .refresh {
+    margin-top: 46px;
+  }
+
+  .stake .section {
+    margin-top: 60px;
+  }
+}
+
+@media (max-width: 414px) {
+  .show-unstake .mint-button {
+    padding: 10px 50px;
+    font-size: 12px;
+  }
+
+  .show-claim .mint-button {
+    padding: 10px 50px;
+    font-size: 12px;
+  }
+
+  .staking-nav {
+    margin-top: 150px;
+  }
+
+  .staking .voxel-box {
+    padding: 30px;
+  }
+
+  .stake-nav-btn {
+    font-size: 16px;
+    border: 2px solid white;
+  }
+  .stake-nav-btn-active {
+    font-size: 16px;
+    border: 2px solid rgb(17, 17, 17);
+  }
+}
