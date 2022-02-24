@@ -11,9 +11,22 @@ import Staking from "./pages/staking"
 import Burning from "./pages/burning"
 
 function App() {
-  const [showline, setShowline] = useState(true)
+  const [isBurning, setIsBurning] = useState(true)
+  const [isStaking, setIsStaking] = useState(false)
 
-  const showLine = () => setShowline(!showline)
+  const IsBurning = () => {
+    if (isBurning == false) {
+      setIsBurning(true)
+      setIsStaking(false)
+    }
+  }
+
+  const IsStaking = () => {
+    if (isStaking == false) {
+      setIsBurning(false)
+      setIsStaking(true)
+    }
+  }
 
   return (
     <div className="App">
@@ -23,18 +36,20 @@ function App() {
       {/* <PublicSaleMint /> */}
       <Router>
         <div className="staking-nav flex">
-          <div className="burning-staking-btn" onClick={showLine}>
+          <div className="burning-staking-btn" onClick={IsBurning}>
             <Link to="/" className=" kasumi">
-              <p className={showline ? "grey-color" : "white-color"}>BURNING</p>
-              <div className={showline ? "line" : "hide"} />
+              <p className={isBurning ? "grey-color" : "white-color"}>
+                BURNING
+              </p>
+              <div className={isBurning ? "line" : "hide"} />
             </Link>
           </div>
-          <div className="burning-staking-btn" onClick={showLine}>
+          <div className="burning-staking-btn" onClick={IsStaking}>
             <Link to="/staking" className=" kasumi">
-              <p className={!showline ? "grey-color" : "white-color"}>
+              <p className={isStaking ? "grey-color" : "white-color"}>
                 STAKING
               </p>
-              <div className={showline ? "hide" : "line"} />
+              <div className={!isStaking ? "hide" : "line"} />
             </Link>
           </div>
         </div>
