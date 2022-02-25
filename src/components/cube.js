@@ -28,7 +28,6 @@ export default function () {
   };
 
   const attachEventsListener = () => {
-    window.addEventListener("mousemove", onMouseMove);
     window.addEventListener("resize", calculatePosition);
   };
 
@@ -70,7 +69,7 @@ export default function () {
       x: (tx - x) * 0.4,
       y: (ty - y) * 0.4,
       scale: 1.15,
-      ease: "power2.out",
+      ease: "Power2.easeOut",
       duration: 0.4,
     });
     el.current.style.zIndex = 10;
@@ -81,14 +80,14 @@ export default function () {
       x: 0,
       y: 0,
       scale: 1,
-      ease: "elastic.out(1.2, 0.4)",
+      ease: "Elastic.easeOut(1.2, 0.4)",
       duration: 0.7,
     });
     el.current.style.zIndex = 1;
   };
 
   return (
-    <div onClick={cubeAnimation} className="hover-cube" id="cube">
+    <div onClick={cubeAnimation} onMouseMove={onMouseMove}>
       <img src={voxels} ref={el} />
     </div>
   );
