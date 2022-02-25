@@ -38,7 +38,8 @@ const Video = () => {
       let speedKbps = (speedBps / 1024).toFixed(2);
       let speedMbps = (speedKbps / 1024).toFixed(2);
       //code your need according to different network speed..:D
-      if (speedMbps > 30) setFlag(true);
+      console.log(speedMbps);
+      if (speedMbps > 3) setFlag(true);
     }
   };
   return (
