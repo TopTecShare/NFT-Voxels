@@ -10,13 +10,6 @@
   z-index: 10;
 } */
 
-.cube .img-active {
-  width: 80%;
-  transform: scale(1.2, 1.2);
-}
-
 .cube img {
   width: 80%;
-  transform: scale(1, 1);
-  transition: 0.5s ease-in-out;
 }

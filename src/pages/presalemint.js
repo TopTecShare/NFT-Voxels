@@ -1,9 +1,9 @@
-import CountDown from "../components/countdown"
-import CubeMint from "../components/cubemint"
+import CountDown from "../components/countdown";
+import CubeMint from "../components/cubemint";
 
-import "../styles/presalemint.css"
+import "../styles/presalemint.css";
 
-export default function () {
+const PresaleMint = () => {
   return (
     <div className="presalemint">
       <div className="presalemint-time">
@@ -13,5 +13,6 @@ export default function () {
       </div>
       <CubeMint />
     </div>
-  )
-}
+  );
+};
+export default PresaleMint;

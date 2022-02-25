@@ -1,11 +1,13 @@
-import Cube from "../components/cube"
+import Cube from "../components/cube";
 
-import "../styles/home.css"
+import "../styles/home.css";
 
-export default function () {
+const Home = () => {
   return (
     <div className="cube">
       <Cube />
     </div>
-  )
-}
+  );
+};
+
+export default Home;

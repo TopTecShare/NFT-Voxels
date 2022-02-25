@@ -1,36 +1,36 @@
-import React, { useState } from "react"
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"
+import React, { useState } from "react";
+import { Routes, Route, Link } from "react-router-dom";
 
-import "../styles/staking.css"
-import refresh from "../img/Refresh Button.png"
+import "../styles/staking.css";
+import refresh from "../img/Refresh Button.png";
 
-import Stake from "../components/stake"
-import UnStake from "../components/unstake"
-import Claim from "../components/claim"
-import Bar from "../components/progressbar"
+import Stake from "../components/stake";
+import UnStake from "../components/unstake";
+import Claim from "../components/claim";
+import Bar from "../components/progressbar";
 
-export default function () {
-  const [stake, setStake] = useState(true)
-  const [unStake, setUnStake] = useState(false)
-  const [claim, setClaim] = useState(false)
+const Staking = () => {
+  const [stake, setStake] = useState(true);
+  const [unStake, setUnStake] = useState(false);
+  const [claim, setClaim] = useState(false);
 
   const stakeBtn = () => {
-    setStake(true)
-    setUnStake(false)
-    setClaim(false)
-  }
+    setStake(true);
+    setUnStake(false);
+    setClaim(false);
+  };
 
   const unStakeBtn = () => {
-    setStake(false)
-    setUnStake(true)
-    setClaim(false)
-  }
+    setStake(false);
+    setUnStake(true);
+    setClaim(false);
+  };
 
   const unClaimBtn = () => {
-    setStake(false)
-    setUnStake(false)
-    setClaim(true)
-  }
+    setStake(false);
+    setUnStake(false);
+    setClaim(true);
+  };
 
   return (
     <div className="staking">
@@ -68,7 +68,7 @@ export default function () {
           </Link>
         </div>
         <div className="voxel-box-title">
-          <img src={refresh} className="refresh" />
+          <img src={refresh} className="refresh" alt="refresh" />
         </div>
         <Routes>
           <Route path="/unstake" element={<UnStake />} />
@@ -77,7 +77,9 @@ export default function () {
         </Routes>
       </div>
       <div className={stake ? "show-stake" : "hide"}>
-        <a className="mint-button kasumi">STAKE</a>
+        <a className="mint-button kasumi" href="#mint">
+          STAKE
+        </a>
         <div className="line" />
         <Bar
           now={`${(2121 / 6363) * 100}%`}
@@ -102,5 +104,7 @@ export default function () {
         />
       </div>
     </div>
-  )
-}
+  );
+};
+
+export default Staking;

@@ -1,24 +1,24 @@
-import refresh from "../img/Refresh Button.png"
-import voxels from "../img/Main Cube.png"
-import selectbox from "../img/Selection Box.png"
+import refresh from "../img/Refresh Button.png";
+import voxels from "../img/Main Cube.png";
+import selectbox from "../img/Selection Box.png";
 
-import { useState } from "react"
+import { useState } from "react";
 
-import "../styles/burning.css"
+import "../styles/burning.css";
 
-export default function () {
-  const [selectBox, setSelectBox] = useState(false)
+const Burning = () => {
+  const [selectBox, setSelectBox] = useState(false);
 
   const selectFunc = () => {
-    setSelectBox(!selectBox)
-  }
+    setSelectBox(!selectBox);
+  };
 
   return (
     <div className="burning">
       <div className="voxel-box">
         <div className="voxel-box-title">
           <p className="agency balance">Balance: 36.74 WIRE</p>
-          <img src={refresh} className="refresh" />
+          <img src={refresh} className="refresh" alt="refresh" />
         </div>
         <div className="voxel-sections">
           <div className="section">
@@ -26,7 +26,7 @@ export default function () {
             <div className="flex">
               <div onClick={selectFunc} className="voxels-element">
                 <div>
-                  <img src={voxels} className="voxel-pic" />
+                  <img src={voxels} className="voxel-pic" alt="voxel picture" />
                 </div>
                 <div>
                   <a className="voxel-letter">#0342</a>
@@ -35,6 +35,7 @@ export default function () {
                   <img
                     src={selectbox}
                     className={selectBox ? "select-box" : "hide"}
+                    alt="selectbox"
                   />
                 </div>
               </div>
@@ -147,5 +148,7 @@ export default function () {
       </div>
       <p className="agency cost-cube">Cost: 30 $WIRE</p>
     </div>
-  )
-}
+  );
+};
+
+export default Burning;
