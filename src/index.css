@@ -11,6 +11,13 @@ body {
   background-attachment: fixed;
 }
 
+#video {
+  position: fixed;
+  z-index: -1;
+  left: 0;
+  top: 0;
+}
+
 @font-face {
   font-family: "Kasumi";
   src: local("Kasumi"), url(./fonts/Kasumi_Regular.otf) format("opentype");

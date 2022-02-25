@@ -13,7 +13,7 @@ export default function () {
   useEffect(() => {
     setTimeout(calculatePosition, 400);
     attachEventsListener();
-  });
+  }, []);
 
   const cubeAnimation = () => {
     el.current.style.transform = "scale(1.2, 1.2)";
