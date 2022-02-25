@@ -50,6 +50,13 @@ export default function () {
     let ty = e.clientY - y;
     let distance = Math.sqrt(tx * tx + ty * ty);
 
+    console.log(
+      distance,
+      width,
+      hoverArea,
+      distance < width * hoverArea,
+      hover
+    );
     if (distance < width * hoverArea) {
       hv = true;
       if (!hover) {
@@ -87,7 +94,14 @@ export default function () {
   };
 
   return (
-    <div onClick={cubeAnimation} onMouseMove={onMouseMove}>
+    <div
+      onClick={cubeAnimation}
+      onMouseMove={onMouseMove}
+      onMouseLeave={() => {
+        if (hover) onLeave();
+        setHover(false);
+      }}
+    >
       <img src={voxels} ref={el} />
     </div>
   );

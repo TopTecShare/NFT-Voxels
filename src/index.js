@@ -9,8 +9,7 @@ import Footer from "./components/footer";
 import backgroundVideo from "./video/background_cubes.mp4";
 
 const Video = () => {
-  const userImageLink =
-    "https://media.geeksforgeeks.org/wp-content/cdn-uploads/20200714180638/CIP_Launch-banner.png";
+  const userImageLink = "./img/Discord.png";
   const downloadSize = 83131;
   const [flag, setFlag] = useState(false);
   useEffect(() => {
