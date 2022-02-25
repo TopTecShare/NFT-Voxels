@@ -30,11 +30,11 @@ function App() {
 
   return (
     <div className="App">
-      {/* <Home /> */}
+      <Home />
       {/* <PresaleMint /> */}
       {/* <PresaleWait /> */}
       {/* <PublicSaleMint /> */}
-      <Router>
+      {/* <Router>
         <div className="staking-nav flex">
           <div className="burning-staking-btn" onClick={IsBurning}>
             <Link to="/" className=" kasumi">
@@ -58,7 +58,7 @@ function App() {
           <Route path="/staking/*" element={<Staking />} />
           <Route path="/" element={<Burning />} />
         </Routes>
-      </Router>
+      </Router> */}
     </div>
   )
 }

@@ -1,3 +1,16 @@
+.unstake .voxel-pic {
+  padding: 10px 15px;
+  border: 10px solid #9c9c9c;
+}
+
+.lock {
+  width: 30px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  z-index: 10;
+}
+
 .burning-staking-btn {
   font-size: 32px;
   margin: 0 50px;

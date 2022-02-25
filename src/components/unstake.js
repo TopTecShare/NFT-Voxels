@@ -1,5 +1,6 @@
 import voxels from "../img/Main Cube.png"
 import selectbox from "../img/Selection Box.png"
+import lock from "../img/Lock Icon.png"
 
 import { useState } from "react"
 
@@ -13,7 +14,7 @@ export default function () {
   }
 
   return (
-    <div className="stake">
+    <div className="unstake">
       <div className="voxel-sections">
         <div className="section">
           <p>CUBE 1</p>
@@ -21,6 +22,7 @@ export default function () {
             <div onClick={selectFunc} className="voxels-element">
               <div>
                 <img src={voxels} className="voxel-pic" />
+                <img src={lock} className="lock" />
               </div>
               <div>
                 <a className="voxel-letter">#0342</a>
@@ -40,6 +42,7 @@ export default function () {
             <div onClick={selectFunc} className="voxels-element">
               <div>
                 <img src={voxels} className="voxel-pic" />
+                <img src={lock} className="lock" />
               </div>
               <div>
                 <a className="voxel-letter">#1437</a>
@@ -59,6 +62,7 @@ export default function () {
             <div onClick={selectFunc} className="voxels-element">
               <div>
                 <img src={voxels} className="voxel-pic" />
+                <img src={lock} className="lock" />
               </div>
               <div>
                 <a className="voxel-letter">#3511</a>

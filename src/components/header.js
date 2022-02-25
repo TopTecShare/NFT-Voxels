@@ -4,7 +4,17 @@ export default function () {
   return (
     <header>
       <div className="header-l">
-        <img src={logo} className="logo" />
+        {/* <a href="#" className="connect-wallet kasumi ">
+          <span>CONNECT WALLET</span>
+        </a> */}
+        <div className="flex">
+          <div>
+            <span className="kasumi logo-l">VOXELS</span>
+          </div>
+          <div>
+            <span className="kasumi logo-r">NFT</span>
+          </div>
+        </div>
       </div>
       <div className="header-r">
         {/* <a href="#" className="connect-wallet kasumi ">
