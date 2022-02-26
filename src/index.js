@@ -9,7 +9,8 @@ import Footer from "./components/footer";
 import backgroundVideo from "./video/background_cubes.mp4";
 
 const Video = () => {
-  const userImageLink = "./img/Discord.png";
+  const userImageLink =
+    "https://ipfs.io/ipfs/QmNPSSUAu5f4Zw8ojbvaEZWqvc1ytzZmvovWa8mepQEBhd";
   const downloadSize = 83131;
   const [flag, setFlag] = useState(false);
   useEffect(() => {

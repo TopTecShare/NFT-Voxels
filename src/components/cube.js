@@ -50,13 +50,13 @@ export default function () {
     let ty = e.clientY - y;
     let distance = Math.sqrt(tx * tx + ty * ty);
 
-    console.log(
-      distance,
-      width,
-      hoverArea,
-      distance < width * hoverArea,
-      hover
-    );
+    // console.log(
+    //   distance,
+    //   width,
+    //   hoverArea,
+    //   distance < width * hoverArea,
+    //   hover
+    // );
     if (distance < width * hoverArea) {
       hv = true;
       if (!hover) {
