@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { BrowserRouter as Router } from "react-router-dom";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
@@ -50,12 +51,12 @@ const Video = () => {
 };
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Router>
     <Header />
     <App />
     <Footer />
     <Video />
-  </React.StrictMode>,
+  </Router>,
   document.getElementById("root")
 );
 

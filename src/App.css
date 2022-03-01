@@ -37,6 +37,11 @@ body {
   cursor: pointer;
 }
 
+a.header-l {
+  text-decoration: none;
+  color: inherit;
+}
+
 .header-l span {
   transition: 0.5s linear;
 }

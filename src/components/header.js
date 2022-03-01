@@ -1,10 +1,11 @@
-import logo from "../img/Voxels Logo.png"
+// import logo from "../img/Voxels Logo.png"
+import { Link } from "react-router-dom";
 
 export default function () {
   return (
     <header>
       <div className="header">
-        <div className="header-l">
+        <Link to="/" className="header-l">
           {/* <a href="#" className="connect-wallet kasumi ">
           <span>CONNECT WALLET</span>
         </a> */}
@@ -12,7 +13,7 @@ export default function () {
             <span className="kasumi logo-l">VOXELS</span>
             <span className="kasumi logo-r">NFT</span>
           </div>
-        </div>
+        </Link>
         <div className="header-r">
           {/* <a href="#" className="connect-wallet kasumi ">
           <span>CONNECT WALLET</span>
@@ -24,5 +25,5 @@ export default function () {
         </div>
       </div>
     </header>
-  )
+  );
 }

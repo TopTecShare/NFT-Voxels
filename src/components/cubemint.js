@@ -1,14 +1,14 @@
-import voxels from "../img/Main Cube.png"
+import voxels from "../img/Main Cube.png";
 
-import Bar from "./progressbar"
-import Cube from "./cube"
+import Bar from "./progressbar";
+import Cube from "./cube";
 
-import "../styles/cube.css"
+import "../styles/cube.css";
 
 export default function () {
   return (
     <div>
-      <div className="voxels">
+      <div className="cube">
         <Cube />
       </div>
 
@@ -24,5 +24,5 @@ export default function () {
         <p className="agency eligible">* ELIGIBLE TO MINT 3 *</p>
       </div>
     </div>
-  )
+  );
 }
