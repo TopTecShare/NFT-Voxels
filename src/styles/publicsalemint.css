@@ -2,6 +2,11 @@
   padding: 140px 0 0 0;
 }
 
+.publicsalemint .cube {
+  position: inherit;
+  transform: none;
+}
+
 @media (max-width: 1024px) {
   .publicsalemint {
     padding: 150px 0;

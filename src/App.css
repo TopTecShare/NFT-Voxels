@@ -142,10 +142,17 @@ footer img {
   footer {
     display: flex;
     justify-content: center;
+    margin-top: 150px;
   }
+
   footer div {
-    right: inherit;
+    position: inherit;
+    display: flex;
+    z-index: 100;
+    bottom: 50px;
+    right: 50px;
   }
+
   .wallet-info {
     flex-wrap: wrap;
     justify-content: center;
@@ -189,5 +196,11 @@ footer img {
   .header {
     padding: 0.5rem;
     width: calc(100% - 1rem);
+  }
+}
+
+@media (max-width: 280px) {
+  footer {
+    margin-top: 50px;
   }
 }

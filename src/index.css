@@ -12,6 +12,8 @@ body {
 }
 
 #video {
+  /* width: 100vw; */
+  /* height: 100vh; */
   position: fixed;
   z-index: -1;
   left: 0;
@@ -46,27 +48,26 @@ body {
   justify-content: center;
 }
 
-.cube {
-  /* display: flex; */
-  justify-content: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  z-index: 10;
-}
 .img-size {
-  width: 30%;
+  width: 20%;
+}
+
+@media (max-width: 1024px) {
+  .img-size {
+    width: 30%;
+  }
 }
 
 @media (max-width: 500px) {
   body {
-    padding: 50px 10px 0 10px;
+    height: 100vh;
   }
 
   .cube {
     margin-left: 10px;
+  }
+
+  footer a {
+    text-align: center;
   }
 }

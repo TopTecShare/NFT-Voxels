@@ -1,9 +1,9 @@
-import voxels from "../img/Main Cube.png";
+import voxels from "../img/Main Cube.png"
 
-import Bar from "./progressbar";
-import Cube from "./cube";
+import Bar from "./progressbar"
+import Cube from "./cube"
 
-import "../styles/cube.css";
+import "../styles/cube.css"
 
 export default function () {
   return (
@@ -11,7 +11,6 @@ export default function () {
       <div className="cube">
         <Cube />
       </div>
-
       <div className="mint-action">
         <p className="agency price">Price: 0.1 ETH</p>
         <Bar now={`${(2000 / 6000) * 100}%`} label={"Minted: 2000/6000"} />
@@ -24,5 +23,5 @@ export default function () {
         <p className="agency eligible">* ELIGIBLE TO MINT 3 *</p>
       </div>
     </div>
-  );
+  )
 }

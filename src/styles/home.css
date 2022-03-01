@@ -9,13 +9,13 @@
   transform: translate(-50%, -50%);
   z-index: 10;
 } */
-
-.cube img {
-  width: 80%;
-}
-
+/* 
 @media (max-width: 425px) {
   .cube img {
     width: 60%;
   }
+} */
+
+.home {
+  margin-top: 250px;
 }

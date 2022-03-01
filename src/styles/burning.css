@@ -121,6 +121,10 @@
 }
 
 @media (max-width: 425px) {
+  .voxel-sections {
+    margin: 20px 25px;
+  }
+
   .voxel-box {
     padding: 20px 15px;
   }
@@ -141,10 +145,6 @@
     margin-top: 20px;
   }
 
-  .voxels-element {
-    margin: 5px;
-  }
-
   .section > p {
     font-size: 18px;
     margin: 0;
@@ -156,13 +156,13 @@
 
   .voxel-pic {
     padding: 15px 20px;
-    width: 80px;
-    height: 96px;
+    width: 100px;
+    height: 120px;
   }
 
   .select-box {
-    width: 125px;
-    height: 161px;
+    width: 140px;
+    height: 185px;
   }
 
   .voxel-pos {
@@ -185,19 +185,5 @@
 @media (max-width: 320px) {
   .voxel-box {
     width: 75%;
-  }
-
-  .voxel-pic {
-    width: 45px;
-    height: 54px;
-  }
-
-  .select-box {
-    width: 85px;
-    height: 104px;
-  }
-
-  .voxel-letter {
-    margin: -10px 0 0 0;
   }
 }

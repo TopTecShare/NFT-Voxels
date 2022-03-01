@@ -8,6 +8,11 @@
   margin: 82px 60px;
 }
 
+.presalemint .cube {
+  position: inherit;
+  transform: none;
+}
+
 .pre-content {
   display: flex;
   margin-top: 10px;
@@ -23,5 +28,11 @@
     font-size: 24px;
     margin-bottom: 20px;
     justify-content: center;
+  }
+}
+
+@media (max-width: 425px) {
+  .presalemint {
+    margin: 0;
   }
 }
