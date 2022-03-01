@@ -13,3 +13,9 @@
 .cube img {
   width: 80%;
 }
+
+@media (max-width: 425px) {
+  .cube img {
+    width: 60%;
+  }
+}

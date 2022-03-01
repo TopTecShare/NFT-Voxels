@@ -15,7 +15,16 @@ body {
 
 .header {
   background-color: #3d3d3d;
-  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 1rem 4rem;
+  z-index: 100;
+  width: calc(100% - 8rem);
 }
 
 .wallet-info {
@@ -46,13 +55,17 @@ body {
 }
 /* finish */
 
+.header-r .balance {
+  font-size: 28px;
+}
+
 .logo-l {
-  font-size: 45px;
+  font-size: 36px;
   margin-right: 15px;
 }
 
 .logo-r {
-  font-size: 45px;
+  font-size: 36px;
   color: #9c9c9c;
 }
 
@@ -66,18 +79,6 @@ header {
   position: relative;
   display: flex;
   z-index: 100;
-}
-
-.header-l {
-  position: fixed;
-  top: 40px;
-  /* margin-right: 30px; */
-}
-
-.header-r {
-  position: fixed;
-  top: 40px;
-  right: 50px;
 }
 
 .balance {
@@ -122,15 +123,11 @@ footer img {
 }
 
 @media (max-width: 1024px) {
-  header {
+  .header {
     display: flex;
     justify-content: center;
-  }
-
-  .header-r {
-    position: fixed;
-    top: 120px;
-    right: inherit;
+    padding: 1rem;
+    width: calc(100% - 2rem);
   }
 
   .balance {
@@ -144,6 +141,14 @@ footer img {
   footer div {
     right: inherit;
   }
+  .wallet-info {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .header-r .balance {
+    font-size: 20px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -152,15 +157,9 @@ footer img {
   }
 }
 
-@media (max-width: 414px) {
+@media (max-width: 425px) {
   .header-l {
     padding: 0 40px;
-  }
-
-  .wallet-info {
-    display: block;
-    text-align: center;
-    /* background-color: #3d3d3d; */
   }
 
   .logo-l {
@@ -172,14 +171,18 @@ footer img {
   }
 }
 
-@media (max-width: 280px) {
+@media (max-width: 320px) {
   .logo-l {
-    font-size: 24px;
+    font-size: 22px;
     margin-right: 15px;
   }
 
   .logo-r {
-    font-size: 24px;
+    font-size: 22px;
     color: #9c9c9c;
+  }
+  .header {
+    padding: 0.5rem;
+    width: calc(100% - 1rem);
   }
 }

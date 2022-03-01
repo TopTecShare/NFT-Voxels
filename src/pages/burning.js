@@ -1,6 +1,6 @@
-import refresh from "../img/Refresh Button.png";
-import Box from "../components/box";
-import "../styles/burning.css";
+import refresh from "../img/Refresh Button.png"
+import Box from "../components/box"
+import "../styles/burning.css"
 
 const Burning = () => {
   return (
@@ -13,21 +13,21 @@ const Burning = () => {
         <div className="voxel-sections">
           <div className="section">
             <p>CUBE 1</p>
-            <div className="flex">
+            <div className="flex voxel-pos">
               <Box>#0342</Box>
               <Box>#1764</Box>
             </div>
           </div>
           <div className="section">
             <p>CUBE 2</p>
-            <div className="flex">
+            <div className="flex voxel-pos">
               <Box>#0920</Box>
               <Box>#1437</Box>
             </div>
           </div>
-          <div className="section">
+          <div className="section ">
             <p>CUBE 3</p>
-            <div className="flex">
+            <div className="flex voxel-pos">
               <Box>#0046</Box>
               <Box>#2127</Box>
               <Box>#3511</Box>
@@ -46,7 +46,7 @@ const Burning = () => {
       </div>
       <p className="agency cost-cube">Cost: 30 $WIRE</p>
     </div>
-  );
-};
+  )
+}
 
-export default Burning;
+export default Burning

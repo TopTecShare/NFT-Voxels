@@ -27,6 +27,13 @@
   align-items: center;
   justify-content: center;
   height: 100%;
+  margin-bottom: 70px;
+}
+
+@media (max-width: 1024px) {
+  .bar {
+    margin-bottom: 120px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -36,11 +43,11 @@
   }
 }
 
-@media (max-width: 414px) {
+@media (max-width: 425px) {
   .el:after {
     padding: 5px 100px;
-    font-size: 24px;
-    width: 150px;
+    font-size: 20px;
+    width: 90px;
   }
 }
 

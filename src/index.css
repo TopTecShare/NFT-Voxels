@@ -1,11 +1,11 @@
 body {
   margin: 0;
+  width: 100%;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  padding: 50px 50px 0 50px;
   background: url(./img/Background.png);
   background-size: cover;
   background-attachment: fixed;
@@ -39,6 +39,11 @@ body {
 .flex {
   display: flex;
   flex-wrap: wrap;
+  /* justify-content: center; */
+}
+
+.center {
+  justify-content: center;
 }
 
 .cube {
@@ -51,4 +56,17 @@ body {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   z-index: 10;
+}
+.img-size {
+  width: 30%;
+}
+
+@media (max-width: 500px) {
+  body {
+    padding: 50px 10px 0 10px;
+  }
+
+  .cube {
+    margin-left: 10px;
+  }
 }

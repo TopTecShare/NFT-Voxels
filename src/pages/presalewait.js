@@ -1,7 +1,7 @@
-import Cube from "../components/cube";
-import CountDown from "../components/countdown";
+import Cube from "../components/cube"
+import CountDown from "../components/countdown"
 
-import "../styles/presalewait.css";
+import "../styles/presalewait.css"
 
 const PresaleWait = () => {
   return (
@@ -11,10 +11,10 @@ const PresaleWait = () => {
         <Cube />
         <div className="pub-content">
           <p className="agency pre-content">PUBLIC SALE WILL OPEN IN</p>
-          <CountDown date="2022-02-28" />
+          <CountDown date="2022-03-28" />
         </div>
       </div>
     </div>
-  );
-};
-export default PresaleWait;
+  )
+}
+export default PresaleWait

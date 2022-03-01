@@ -107,10 +107,6 @@
   width: 150px;
 }
 
-.staking .bar {
-  margin-bottom: 70px;
-}
-
 .show-stake .mint-button {
   background-color: grey;
   color: black;
@@ -179,10 +175,14 @@
   }
 }
 
-@media (max-width: 414px) {
+@media (max-width: 425px) {
   .show-unstake .mint-button {
     padding: 10px 50px;
     font-size: 12px;
+  }
+
+  .unstake .voxel-pic {
+    border: 7px solid #9c9c9c;
   }
 
   .show-claim .mint-button {
@@ -191,19 +191,34 @@
   }
 
   .staking-nav {
-    margin-top: 150px;
+    margin-top: 70px;
   }
 
   .staking .voxel-box {
-    padding: 30px;
+    padding: 15px;
   }
 
   .stake-nav-btn {
     font-size: 16px;
     border: 2px solid white;
   }
+
+  .burning-staking-btn p {
+    font-size: 20px;
+  }
+
   .stake-nav-btn-active {
     font-size: 16px;
     border: 2px solid rgb(17, 17, 17);
+  }
+}
+
+@media (max-width: 320px) {
+  .unstake .voxel-pic {
+    border: 5px solid #9c9c9c;
+  }
+
+  .burning-staking-btn p {
+    font-size: 18px;
   }
 }

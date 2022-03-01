@@ -48,6 +48,7 @@
   font-family: "Agency";
   font-size: 28px;
   z-index: 10;
+  margin: 0;
 }
 
 .hide {
@@ -72,13 +73,13 @@
   font-size: 24px;
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1024px) {
   .burning {
     margin-top: 30px;
   }
 
   .voxel-box {
-    width: 100%;
+    width: 90%;
   }
 
   .voxel-box-title {
@@ -119,9 +120,16 @@
   }
 }
 
-@media (max-width: 414px) {
+@media (max-width: 425px) {
+  .voxel-box {
+    padding: 20px 15px;
+  }
   .voxel-box-title .balance {
     font-size: 18px;
+  }
+
+  .voxel-box {
+    width: 80%;
   }
 
   .voxel-box-title img {
@@ -133,8 +141,13 @@
     margin-top: 20px;
   }
 
+  .voxels-element {
+    margin: 5px;
+  }
+
   .section > p {
     font-size: 18px;
+    margin: 0;
   }
 
   .voxel-letter {
@@ -142,8 +155,18 @@
   }
 
   .voxel-pic {
-    width: 100px;
-    height: 120px;
+    padding: 15px 20px;
+    width: 80px;
+    height: 96px;
+  }
+
+  .select-box {
+    width: 125px;
+    height: 161px;
+  }
+
+  .voxel-pos {
+    justify-content: center;
   }
 
   .voxel-box .balance {
@@ -159,42 +182,22 @@
   }
 }
 
-@media (max-width: 414px) {
-  .voxel-box-title .balance {
-    font-size: 18px;
-  }
-
-  .voxel-box-title img {
-    width: 24px;
-    height: 24px;
-  }
-
-  .section {
-    margin-top: 20px;
-  }
-
-  .section > p {
-    font-size: 18px;
-  }
-
-  .voxel-letter {
-    font-size: 16px;
+@media (max-width: 320px) {
+  .voxel-box {
+    width: 75%;
   }
 
   .voxel-pic {
-    width: 80px;
-    height: 96px;
+    width: 45px;
+    height: 54px;
   }
 
-  .voxel-box .balance {
-    font-size: 14px;
+  .select-box {
+    width: 85px;
+    height: 104px;
   }
 
-  .select-cube {
-    font-size: 16px;
-  }
-
-  .cost-cube {
-    font-size: 14px;
+  .voxel-letter {
+    margin: -10px 0 0 0;
   }
 }

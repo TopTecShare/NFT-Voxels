@@ -1,19 +1,19 @@
-import React, { useState, useEffect, useRef } from "react";
-import { gsap } from "gsap";
-import "../styles/home.css";
-import voxels from "../img/Main Cube.png";
+import React, { useState, useEffect, useRef } from "react"
+import { gsap } from "gsap"
+import "../styles/home.css"
+import voxels from "../img/Main Cube.png"
 
 export default function () {
-  const el = useRef(null);
-  const [hover, setHover] = useState(false);
-  const [x, setX] = useState(null);
-  const [y, setY] = useState(null);
-  const [width, setWidth] = useState(null);
+  const el = useRef(null)
+  const [hover, setHover] = useState(false)
+  const [x, setX] = useState(null)
+  const [y, setY] = useState(null)
+  const [width, setWidth] = useState(null)
 
   useEffect(() => {
-    setTimeout(calculatePosition, 400);
-    attachEventsListener();
-  }, []);
+    setTimeout(calculatePosition, 400)
+    attachEventsListener()
+  }, [])
 
   // const cubeAnimation = (e) => {
   //   el.current.style.transform = "scale(1.2, 1.2)";
@@ -28,28 +28,28 @@ export default function () {
   // };
 
   const attachEventsListener = () => {
-    window.addEventListener("resize", calculatePosition);
-  };
+    window.addEventListener("resize", calculatePosition)
+  }
 
   const calculatePosition = () => {
     gsap.set(el.current, {
       x: 0,
       y: 0,
       scale: 1,
-    });
-    const box = el.current.getBoundingClientRect();
-    setX(box.left + box.width * 0.5);
-    setY(box.top + box.height * 0.5);
-    setWidth(box.width);
-  };
+    })
+    const box = el.current.getBoundingClientRect()
+    setX(box.left + box.width * 0.5)
+    setY(box.top + box.height * 0.5)
+    setWidth(box.width)
+  }
 
   const onMouseMove = (e) => {
     if (window.innerWidth > 768) {
-      let hv = false;
-      let hoverArea = hover ? 0.7 : 0.5;
-      let tx = e.clientX - x;
-      let ty = e.clientY - y;
-      let distance = Math.sqrt(tx * tx + ty * ty);
+      let hv = false
+      let hoverArea = hover ? 0.7 : 0.5
+      let tx = e.clientX - x
+      let ty = e.clientY - y
+      let distance = Math.sqrt(tx * tx + ty * ty)
 
       // console.log(
       //   distance,
@@ -59,19 +59,19 @@ export default function () {
       //   hover
       // );
       if (distance < width * hoverArea) {
-        hv = true;
+        hv = true
         if (!hover) {
-          setHover(true);
+          setHover(true)
         }
-        onHover(e.clientX, e.clientY);
+        onHover(e.clientX, e.clientY)
       }
 
       if (!hv && hover) {
-        onLeave();
-        setHover(false);
+        onLeave()
+        setHover(false)
       }
     }
-  };
+  }
 
   const onHover = (tx, ty) => {
     gsap.to(el.current, {
@@ -80,9 +80,9 @@ export default function () {
       scale: 1.15,
       ease: "Power2.easeOut",
       duration: 0.4,
-    });
-    el.current.style.zIndex = 10;
-  };
+    })
+    el.current.style.zIndex = 10
+  }
 
   const onLeave = () => {
     if (window.innerWidth > 768) {
@@ -92,21 +92,21 @@ export default function () {
         scale: 1,
         ease: "Elastic.easeOut(1.2, 0.4)",
         duration: 0.7,
-      });
-      el.current.style.zIndex = 1;
+      })
+      el.current.style.zIndex = 1
     }
-  };
+  }
 
   return (
     <div
       // onClick={cubeAnimation}
       onMouseMove={onMouseMove}
       onMouseLeave={() => {
-        if (hover) onLeave();
-        setHover(false);
+        if (hover) onLeave()
+        setHover(false)
       }}
     >
-      <img src={voxels} ref={el} />
+      <img src={voxels} ref={el} className="img-size" />
     </div>
-  );
+  )
 }

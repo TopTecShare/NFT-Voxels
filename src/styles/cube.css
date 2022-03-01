@@ -50,6 +50,12 @@
   margin: 5px;
 }
 
+@media (max-width: 425px) {
+  .voxels img {
+    width: 40%;
+  }
+}
+
 @media (max-width: 360px) {
   .price {
     font-size: 30px;

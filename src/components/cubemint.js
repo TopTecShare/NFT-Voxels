@@ -1,6 +1,7 @@
 import voxels from "../img/Main Cube.png"
 
 import Bar from "./progressbar"
+import Cube from "./cube"
 
 import "../styles/cube.css"
 
@@ -8,10 +9,9 @@ export default function () {
   return (
     <div>
       <div className="voxels">
-        <div>
-          <img src={voxels} />
-        </div>
+        <Cube />
       </div>
+
       <div className="mint-action">
         <p className="agency price">Price: 0.1 ETH</p>
         <Bar now={`${(2000 / 6000) * 100}%`} label={"Minted: 2000/6000"} />
