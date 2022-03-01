@@ -1,18 +1,8 @@
 import refresh from "../img/Refresh Button.png";
-import voxels from "../img/Main Cube.png";
-import selectbox from "../img/Selection Box.png";
-
-import { useState } from "react";
-
+import Box from "../components/box";
 import "../styles/burning.css";
 
 const Burning = () => {
-  const [selectBox, setSelectBox] = useState(false);
-
-  const selectFunc = () => {
-    setSelectBox(!selectBox);
-  };
-
   return (
     <div className="burning">
       <div className="voxel-box">
@@ -24,115 +14,23 @@ const Burning = () => {
           <div className="section">
             <p>CUBE 1</p>
             <div className="flex">
-              <div onClick={selectFunc} className="voxels-element">
-                <div>
-                  <img src={voxels} className="voxel-pic" alt="voxel picture" />
-                </div>
-                <div>
-                  <a className="voxel-letter">#0342</a>
-                </div>
-                <div>
-                  <img
-                    src={selectbox}
-                    className={selectBox ? "select-box" : "hide"}
-                    alt="selectbox"
-                  />
-                </div>
-              </div>
-              <div onClick={selectFunc} className="voxels-element">
-                <div>
-                  <img src={voxels} className="voxel-pic" />
-                </div>
-                <div>
-                  <a className="voxel-letter">#1764</a>
-                </div>
-                <div>
-                  <img
-                    src={selectbox}
-                    className={selectBox ? "select-box" : "hide"}
-                  />
-                </div>
-              </div>
+              <Box>#0342</Box>
+              <Box>#1764</Box>
             </div>
           </div>
           <div className="section">
             <p>CUBE 2</p>
             <div className="flex">
-              <div onClick={selectFunc} className="voxels-element">
-                <div>
-                  <img src={voxels} className="voxel-pic" />
-                </div>
-                <div>
-                  <a className="voxel-letter">#0920</a>
-                </div>
-                <div>
-                  <img
-                    src={selectbox}
-                    className={selectBox ? "select-box" : "hide"}
-                  />
-                </div>
-              </div>
-              <div onClick={selectFunc} className="voxels-element">
-                <div>
-                  <img src={voxels} className="voxel-pic" />
-                </div>
-                <div>
-                  <a className="voxel-letter">#1437</a>
-                </div>
-                <div>
-                  <img
-                    src={selectbox}
-                    className={selectBox ? "select-box" : "hide"}
-                  />
-                </div>
-              </div>
+              <Box>#0920</Box>
+              <Box>#1437</Box>
             </div>
           </div>
           <div className="section">
             <p>CUBE 3</p>
             <div className="flex">
-              <div onClick={selectFunc} className="voxels-element">
-                <div>
-                  <img src={voxels} className="voxel-pic" />
-                </div>
-                <div>
-                  <a className="voxel-letter">#0046</a>
-                </div>
-                <div>
-                  <img
-                    src={selectbox}
-                    className={selectBox ? "select-box" : "hide"}
-                  />
-                </div>
-              </div>
-              <div onClick={selectFunc} className="voxels-element">
-                <div>
-                  <img src={voxels} className="voxel-pic" />
-                </div>
-                <div>
-                  <a className="voxel-letter">#2127</a>
-                </div>
-                <div>
-                  <img
-                    src={selectbox}
-                    className={selectBox ? "select-box" : "hide"}
-                  />
-                </div>
-              </div>
-              <div onClick={selectFunc} className="voxels-element">
-                <div>
-                  <img src={voxels} className="voxel-pic" />
-                </div>
-                <div>
-                  <a className="voxel-letter">#3511</a>
-                </div>
-                <div>
-                  <img
-                    src={selectbox}
-                    className={selectBox ? "select-box" : "hide"}
-                  />
-                </div>
-              </div>
+              <Box>#0046</Box>
+              <Box>#2127</Box>
+              <Box>#3511</Box>
             </div>
           </div>
         </div>
@@ -141,7 +39,7 @@ const Burning = () => {
         </p>
       </div>
       <div>
-        <p className="agency select-cube">Cube #0342, #1437, # 0046 selected</p>
+        <p className="agency select-cube">Cube #0342, #1437, #0046 selected</p>
       </div>
       <div>
         <button className="kasumi mint-button">BURN</button>

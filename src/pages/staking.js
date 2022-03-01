@@ -77,9 +77,10 @@ const Staking = () => {
         </Routes>
       </div>
       <div className={stake ? "show-stake" : "hide"}>
-        <a className="mint-button kasumi" href="#mint">
+        <p className="agency ">Cube #1437 has been selected</p>
+        <button className="mint-button kasumi" href="#mint">
           STAKE
-        </a>
+        </button>
         <div className="line" />
         <Bar
           now={`${(2121 / 6363) * 100}%`}

@@ -15,17 +15,17 @@ export default function () {
     attachEventsListener();
   }, []);
 
-  const cubeAnimation = () => {
-    el.current.style.transform = "scale(1.2, 1.2)";
-    el.current.style.transition = "0.5s ease-in-out";
-    setTimeout(() => {
-      el.current.style.transform = "scale(1, 1)";
-      el.current.style.transition = "0.5s ease-in-out";
-    }, 500);
-    setTimeout(() => {
-      el.current.style.transition = "0s ease-in-out";
-    }, 1000);
-  };
+  // const cubeAnimation = (e) => {
+  //   el.current.style.transform = "scale(1.2, 1.2)";
+  //   el.current.style.transition = "0.5s ease-in-out";
+  //   setTimeout(() => {
+  //     el.current.style.transform = "scale(1, 1)";
+  //     el.current.style.transition = "0.5s ease-in-out";
+  //   }, 500);
+  //   setTimeout(() => {
+  //     el.current.style.transition = "0s ease-in-out";
+  //   }, 1000);
+  // };
 
   const attachEventsListener = () => {
     window.addEventListener("resize", calculatePosition);
@@ -44,30 +44,32 @@ export default function () {
   };
 
   const onMouseMove = (e) => {
-    let hv = false;
-    let hoverArea = hover ? 0.7 : 0.5;
-    let tx = e.clientX - x;
-    let ty = e.clientY - y;
-    let distance = Math.sqrt(tx * tx + ty * ty);
+    if (window.innerWidth > 768) {
+      let hv = false;
+      let hoverArea = hover ? 0.7 : 0.5;
+      let tx = e.clientX - x;
+      let ty = e.clientY - y;
+      let distance = Math.sqrt(tx * tx + ty * ty);
 
-    // console.log(
-    //   distance,
-    //   width,
-    //   hoverArea,
-    //   distance < width * hoverArea,
-    //   hover
-    // );
-    if (distance < width * hoverArea) {
-      hv = true;
-      if (!hover) {
-        setHover(true);
+      // console.log(
+      //   distance,
+      //   width,
+      //   hoverArea,
+      //   distance < width * hoverArea,
+      //   hover
+      // );
+      if (distance < width * hoverArea) {
+        hv = true;
+        if (!hover) {
+          setHover(true);
+        }
+        onHover(e.clientX, e.clientY);
       }
-      onHover(e.clientX, e.clientY);
-    }
 
-    if (!hv && hover) {
-      onLeave();
-      setHover(false);
+      if (!hv && hover) {
+        onLeave();
+        setHover(false);
+      }
     }
   };
 
@@ -83,19 +85,21 @@ export default function () {
   };
 
   const onLeave = () => {
-    gsap.to(el.current, {
-      x: 0,
-      y: 0,
-      scale: 1,
-      ease: "Elastic.easeOut(1.2, 0.4)",
-      duration: 0.7,
-    });
-    el.current.style.zIndex = 1;
+    if (window.innerWidth > 768) {
+      gsap.to(el.current, {
+        x: 0,
+        y: 0,
+        scale: 1,
+        ease: "Elastic.easeOut(1.2, 0.4)",
+        duration: 0.7,
+      });
+      el.current.style.zIndex = 1;
+    }
   };
 
   return (
     <div
-      onClick={cubeAnimation}
+      // onClick={cubeAnimation}
       onMouseMove={onMouseMove}
       onMouseLeave={() => {
         if (hover) onLeave();

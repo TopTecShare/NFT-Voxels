@@ -13,8 +13,14 @@ body {
   display: none;
 }
 
+.header {
+  background-color: #3d3d3d;
+  width: 100%;
+}
+
 .wallet-info {
   display: flex;
+  /* background-color: #3d3d3d; */
 }
 
 /* this is logo animation part */
@@ -154,6 +160,7 @@ footer img {
   .wallet-info {
     display: block;
     text-align: center;
+    /* background-color: #3d3d3d; */
   }
 
   .logo-l {

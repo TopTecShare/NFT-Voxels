@@ -76,22 +76,20 @@
   .burning {
     margin-top: 30px;
   }
-}
 
-@media (max-width: 916px) {
+  .voxel-box {
+    width: 100%;
+  }
+
   .voxel-box-title {
     justify-content: center;
   }
+}
 
-  .voxel-sections {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .voxel-sections .flex {
+@media (max-width: 916px) {
+  /* .voxel-sections .flex {
     display: inline;
-  }
+  } */
 
   .section > p {
     text-align: center;
