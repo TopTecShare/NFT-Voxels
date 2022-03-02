@@ -17,5 +17,11 @@
 } */
 
 .home {
-  margin-top: 250px;
+  margin: 300px 0 250px 0;
+}
+
+@media (max-width: 375px) {
+  .home {
+    margin: 200px 0 150px 0;
+  }
 }

@@ -70,4 +70,8 @@ body {
   footer a {
     text-align: center;
   }
+
+  .img-size {
+    width: 50%;
+  }
 }
