@@ -3,7 +3,11 @@ import { Contract } from "@ethersproject/contracts";
 import { useContractCall, useContractFunction } from "@usedapp/core";
 
 import VoxelsStakingABI from "../global/abis/VoxelsStaking.json";
+<<<<<<< HEAD
 import { BIG_ZERO, VOXELS_STAKING } from "../global/constants";
+=======
+import { VOXELS_STAKING } from "../global/constants";
+>>>>>>> ef49f74 (stake integration)
 
 export const useDeposit = () => {
   const abi = new Interface(VoxelsStakingABI);
