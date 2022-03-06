@@ -1,5 +1,3 @@
-
-
 import CubeMint from "../components/cubemint";
 
 import "../styles/publicsalemint.css";
@@ -7,7 +5,7 @@ import "../styles/publicsalemint.css";
 const PresaleWait = () => {
   return (
     <div className="publicsalemint">
-      <CubeMint />
+      <CubeMint isPublic={true} />
     </div>
   );
 };

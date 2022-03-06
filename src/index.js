@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
+import { ChainId, DAppProvider, Mainnet, Rinkeby } from "@usedapp/core";
+import { ToastContainer } from "react-toastify";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
@@ -8,6 +10,9 @@ import reportWebVitals from "./reportWebVitals";
 import Header from "./components/header";
 import Footer from "./components/footer";
 import backgroundVideo from "./video/background_cubes.mp4";
+import { infuraUrl } from "./global/utils";
+
+import "react-toastify/dist/ReactToastify.css";
 
 const Video = () => {
   const userImageLink =
@@ -50,12 +55,25 @@ const Video = () => {
   );
 };
 
+const config = {
+  readOnlyChainId: ChainId.Mainnet,
+  networks: [Mainnet, Rinkeby],
+  readOnlyUrls: {
+    [ChainId.Mainnet]: infuraUrl(ChainId.Mainnet),
+    [ChainId.Rinkeby]: infuraUrl(ChainId.Rinkeby),
+  },
+  pollingInterval: 1000,
+};
+
 ReactDOM.render(
   <Router>
-    <Header />
-    <App />
-    <Footer />
-    <Video />
+    <DAppProvider config={config}>
+      <Header />
+      <App />
+      <ToastContainer />
+      <Footer />
+      <Video />
+    </DAppProvider>
   </Router>,
   document.getElementById("root")
 );

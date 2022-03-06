@@ -1,30 +1,35 @@
-import Box from "./box"
+import Box from "./box";
 
-import "../styles/staking.css"
+import "../styles/staking.css";
+import { formatCubeId } from "../global/utils";
 
-export default function () {
+export default function Unstake({ onCubeSelect, tokens }) {
   return (
     <div className="unstake">
       <div className="voxel-sections">
-        <div className="section">
-          <p>CUBE 1</p>
-          <div className="flex voxel-pos">
-            <Box isLock={true}>#0342</Box>
-          </div>
-        </div>
-        <div className="section">
-          <p>CUBE 2</p>
-          <div className="flex voxel-pos">
-            <Box isLock={true}>#1437</Box>
-          </div>
-        </div>
-        <div className="section">
-          <p>CUBE 3</p>
-          <div className="flex voxel-pos">
-            <Box isLock={true}>#3511</Box>
-          </div>
-        </div>
+        {[...Array(3).keys()].map((idx) => {
+          const cubeTokens = tokens.filter(
+            (tokenId) =>
+              tokenId >= idx * 2121 + 1 && tokenId <= (idx + 1) * 2121
+          );
+          return (
+            <div className="section" key={idx}>
+              <p>CUBE {idx + 1}</p>
+              <div className="flex voxel-pos">
+                {cubeTokens.map((tokenId) => (
+                  <Box
+                    onSelect={(selected) => onCubeSelect(tokenId, selected)}
+                    key={tokenId}
+                    isLock={true}
+                  >
+                    {formatCubeId(tokenId)}
+                  </Box>
+                ))}
+              </div>
+            </div>
+          );
+        })}
       </div>
     </div>
-  )
+  );
 }

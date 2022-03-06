@@ -1,15 +1,16 @@
-import voxels from "../img/Main Cube.png"
-import selectbox from "../img/Selection Box.png"
-import lock from "../img/Lock Icon.png"
+import voxels from "../img/Main Cube.png";
+import selectbox from "../img/Selection Box.png";
+import lock from "../img/Lock Icon.png";
 
-import { useState } from "react"
+import { useState } from "react";
 
-const Box = ({ isLock, children }) => {
-  const [selectBox, setSelectBox] = useState(false)
+const Box = ({ isLock, children, onSelect }) => {
+  const [selectBox, setSelectBox] = useState(false);
 
   const selectFunc = () => {
-    setSelectBox(!selectBox)
-  }
+    setSelectBox(!selectBox);
+    onSelect(!selectBox);
+  };
 
   return (
     <div onClick={selectFunc} className="voxels-element">
@@ -24,7 +25,7 @@ const Box = ({ isLock, children }) => {
         <img src={selectbox} className={selectBox ? "select-box" : "hide"} />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Box
+export default Box;

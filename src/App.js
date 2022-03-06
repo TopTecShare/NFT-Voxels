@@ -15,14 +15,14 @@ const StakingNav = () => {
   const [isStaking, setIsStaking] = useState(false);
 
   const IsBurning = () => {
-    if (isBurning == false) {
+    if (!isBurning) {
       setIsBurning(true);
       setIsStaking(false);
     }
   };
 
   const IsStaking = () => {
-    if (isStaking == false) {
+    if (!isStaking) {
       setIsBurning(false);
       setIsStaking(true);
     }
