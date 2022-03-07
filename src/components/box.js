@@ -4,10 +4,11 @@ import lock from "../img/Lock Icon.png";
 
 import { useState } from "react";
 
-const Box = ({ isLock, children, onSelect }) => {
+const Box = ({ isLock, children, onSelect, allowed = true }) => {
   const [selectBox, setSelectBox] = useState(false);
 
   const selectFunc = () => {
+    if (!allowed) return;
     setSelectBox(!selectBox);
     onSelect(!selectBox);
   };

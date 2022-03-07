@@ -3,6 +3,7 @@ import { Contract } from "@ethersproject/contracts";
 import { useContractCall, useContractFunction } from "@usedapp/core";
 
 import VoxelsStakingABI from "../global/abis/VoxelsStaking.json";
+
 import { BIG_ZERO, VOXELS_STAKING } from "../global/constants";
 
 export const useDeposit = () => {

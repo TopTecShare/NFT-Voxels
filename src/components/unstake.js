@@ -7,14 +7,14 @@ export default function Unstake({ onCubeSelect, tokens }) {
   return (
     <div className="unstake">
       <div className="voxel-sections">
-        {[...Array(3).keys()].map((idx) => {
+        {[...Array(4).keys()].map((idx) => {
           const cubeTokens = tokens.filter(
             (tokenId) =>
               tokenId >= idx * 2121 + 1 && tokenId <= (idx + 1) * 2121
           );
           return (
             <div className="section" key={idx}>
-              <p>CUBE {idx + 1}</p>
+              <p>CUBE {idx < 3 ? idx + 1 : "GENESIS"}</p>
               <div className="flex voxel-pos">
                 {cubeTokens.map((tokenId) => (
                   <Box

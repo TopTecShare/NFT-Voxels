@@ -250,7 +250,9 @@
     "type": "function"
   },
   {
-    "inputs": [],
+    "inputs": [
+      { "internalType": "uint256[]", "name": "tokenIds", "type": "uint256[]" }
+    ],
     "name": "genesisMint",
     "outputs": [],
     "stateMutability": "nonpayable",
