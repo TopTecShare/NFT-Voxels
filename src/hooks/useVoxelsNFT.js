@@ -59,6 +59,19 @@ export function useBurnStartTimestamp() {
   return Number(startTimestamp.toString());
 }
 
+export function useBurnTokenAmount() {
+  const abi = new Interface(VoxelsNFTABI);
+
+  const [burnTokenAmount] = useContractCall({
+    abi,
+    address: VOXELS_NFT,
+    method: "burnTokenAmount",
+    args: [],
+  }) ?? [BIG_ZERO];
+
+  return burnTokenAmount;
+}
+
 export function useInitialMintingStatus() {
   const abi = new Interface(VoxelsNFTABI);
 
@@ -107,6 +120,16 @@ export function usePublicMint() {
   return {
     state,
     publicMint: send,
+  };
+}
+
+export function useGenesisMint() {
+  const abi = new Interface(VoxelsNFTABI);
+  const contract = new Contract(VOXELS_NFT, abi);
+  const { send, state } = useContractFunction(contract, "genesisMint");
+  return {
+    state,
+    genesisMint: send,
   };
 }
 

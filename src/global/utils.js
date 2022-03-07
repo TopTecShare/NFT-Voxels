@@ -39,6 +39,8 @@ export const formatError = (msg, comment = "") => {
       return `The feature is paused! Please ask to the administrator.`;
     case "execution reverted: ERC721: transfer caller is not owner nor approved":
       return `The transfer caller is not owner nor approved!`;
+    case "execution reverted: Burn timestamp not set":
+      return `Burning start time is not set yet!`;
     default:
       return msg;
   }
