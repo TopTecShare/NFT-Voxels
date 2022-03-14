@@ -113,6 +113,19 @@ export function useWhitelistAmountMint() {
   };
 }
 
+export function useWhitelistSelectionMint() {
+  const abi = new Interface(VoxelsNFTABI);
+  const contract = new Contract(VOXELS_NFT, abi);
+  const { send, state } = useContractFunction(
+    contract,
+    "whitelistSelectionMint"
+  );
+  return {
+    state,
+    whitelistSelectionMint: send,
+  };
+}
+
 export function usePublicMint() {
   const abi = new Interface(VoxelsNFTABI);
   const contract = new Contract(VOXELS_NFT, abi);

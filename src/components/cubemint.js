@@ -7,24 +7,27 @@ import {
   useInitialMintingStatus,
   usePublicMint,
   useWhitelistAmountMint,
+  useWhitelistSelectionMint,
 } from "../hooks/useVoxelsNFT";
 
 import "../styles/cube.css";
 import { useEffect, useState } from "react";
 import { useEthers } from "@usedapp/core";
-import { MERKLE_TREE_DATA } from "../global/constants";
+import { MERKLE_TREE_DATA_1, MERKLE_TREE_DATA_3 } from "../global/constants";
 import { formatError } from "../global/utils";
 
-export default function Cubemint({ isPublic = false }) {
+export default function Cubemint({ isPublic = false, isSelection = false }) {
   const { pendingCount, totalCount, mintPrice } = useInitialMintingStatus();
   const [mintAmount, setMintAmount] = useState(1);
   const { account } = useEthers();
   const { state: whitelistState, whitelistAmountMint } =
     useWhitelistAmountMint();
+  const { state: whitelistSelState, whitelistSelectionMint } =
+    useWhitelistSelectionMint();
   const { state: publicState, publicMint } = usePublicMint();
 
   const onWhitelistAmountMint = () => {
-    if (!account || !MERKLE_TREE_DATA[account]) {
+    if (!account || !MERKLE_TREE_DATA_3[account]) {
       toast.error("The wallet is not whitelisted", {
         position: toast.POSITION.TOP_RIGHT,
         hideProgressBar: true,
@@ -34,8 +37,24 @@ export default function Cubemint({ isPublic = false }) {
     const mintCost = parseEther(`${mintPrice}`).mul(mintAmount);
     whitelistAmountMint(
       mintAmount,
-      MERKLE_TREE_DATA[account].leaf,
-      MERKLE_TREE_DATA[account].proof,
+      MERKLE_TREE_DATA_3[account].leaf,
+      MERKLE_TREE_DATA_3[account].proof,
+      { value: mintCost }
+    );
+  };
+
+  const onWhitelistSelectionMint = () => {
+    if (!account || !MERKLE_TREE_DATA_1[account]) {
+      toast.error("The wallet is not whitelisted", {
+        position: toast.POSITION.TOP_RIGHT,
+        hideProgressBar: true,
+      });
+      return;
+    }
+    const mintCost = parseEther(`${mintPrice}`);
+    whitelistSelectionMint(
+      MERKLE_TREE_DATA_1[account].leaf,
+      MERKLE_TREE_DATA_1[account].proof,
       { value: mintCost }
     );
   };
@@ -46,14 +65,18 @@ export default function Cubemint({ isPublic = false }) {
   };
 
   useEffect(() => {
-    const state = isPublic ? publicState : whitelistState;
+    const state = isPublic
+      ? publicState
+      : isSelection
+      ? whitelistSelState
+      : whitelistState;
     if (state.status === "Exception" || state.status === "Fail") {
       toast.error(formatError(state.errorMessage), {
         position: toast.POSITION.TOP_RIGHT,
         hideProgressBar: true,
       });
     }
-  }, [whitelistState, publicState, isPublic]);
+  }, [whitelistState, whitelistSelState, publicState, isPublic, isSelection]);
 
   return (
     <div>
@@ -83,7 +106,13 @@ export default function Cubemint({ isPublic = false }) {
         </div>
         <button
           className="mint-button kasumi"
-          onClick={() => (isPublic ? onPublicMint() : onWhitelistAmountMint())}
+          onClick={() =>
+            isPublic
+              ? onPublicMint()
+              : isSelection
+              ? onWhitelistSelectionMint()
+              : onWhitelistAmountMint()
+          }
         >
           MINT
         </button>
