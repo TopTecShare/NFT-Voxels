@@ -18,7 +18,7 @@ const PresaleMint = () => {
           <CountDown duration={duration} />
         </div>
       )}
-      <CubeMint />
+      <CubeMint isSelection={true} />
     </div>
   );
 };
