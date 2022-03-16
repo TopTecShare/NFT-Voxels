@@ -46,6 +46,45 @@ export function useMintStartTimestamp() {
   return Number(startTimestamp.toString());
 }
 
+export function useWhitelistRemaining(address) {
+  const abi = new Interface(VoxelsNFTABI);
+
+  const [remaining] = useContractCall({
+    abi,
+    address: VOXELS_NFT,
+    method: "whitelistRemaining",
+    args: [address],
+  }) ?? [BIG_ZERO];
+
+  return Number(remaining.toString());
+}
+
+export function useWhitelistAmountUsed(address) {
+  const abi = new Interface(VoxelsNFTABI);
+
+  const [used] = useContractCall({
+    abi,
+    address: VOXELS_NFT,
+    method: "whitelistAmountUsed",
+    args: [address],
+  }) ?? [false];
+
+  return used;
+}
+
+export function useWhitelistSelectionUsed(address) {
+  const abi = new Interface(VoxelsNFTABI);
+
+  const [used] = useContractCall({
+    abi,
+    address: VOXELS_NFT,
+    method: "whitelistSelectionUsed",
+    args: [address],
+  }) ?? [false];
+
+  return used;
+}
+
 export function useBurnStartTimestamp() {
   const abi = new Interface(VoxelsNFTABI);
 
