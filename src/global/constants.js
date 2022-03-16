@@ -3,9 +3,9 @@ import { BigNumber } from "@ethersproject/bignumber";
 export const BIG_ZERO = BigNumber.from("0");
 
 // === Addresses ===
-export const VOXELS_NFT = "0x1430D7BC9b9F6cb8C600eE0A9cd0Dc210102b2FD";
-export const WIRE_TOKEN = "0x3AcF579B66f2584b56B688d3C66672b000A3AC32";
-export const VOXELS_STAKING = "0xF3bA5584f2B71EAd30d6B71c07Aa356883e085bd";
+export const VOXELS_NFT = "0x064d31aB21653174A4ad23b9c984d1A6Abe5c705";
+export const WIRE_TOKEN = "0x79900F2b09DD36FD6Bf071B088066699aa209E90";
+export const VOXELS_STAKING = "0xd92046a2Bc0ff5A0da5c45A3d9dF5590202dE2c7";
 
 // === Merkle Tree ===
 export const MERKLE_TREE_DATA_3 = {

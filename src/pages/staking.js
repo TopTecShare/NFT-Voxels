@@ -70,7 +70,7 @@ const Staking = () => {
         depositCubes(stakeSelected);
       }
     } else {
-      toast.error("You should select at least 1 cube!", {
+      toast.error("You should select at least one voxel!", {
         position: toast.POSITION.TOP_RIGHT,
         hideProgressBar: true,
       });
@@ -81,7 +81,7 @@ const Staking = () => {
     if (unstakeSelected.length) {
       withdrawCubes(unstakeSelected);
     } else {
-      toast.error("You should select at least 1 cube!", {
+      toast.error("You should select at least one voxel!", {
         position: toast.POSITION.TOP_RIGHT,
         hideProgressBar: true,
       });
@@ -190,7 +190,7 @@ const Staking = () => {
       </div>
       <div className={stake ? "show-stake" : "hide"}>
         {!!stakeSelected.length && (
-          <p className="agency ">Cube {stakeSelects} has been selected</p>
+          <p className="agency ">Voxel {stakeSelects} has been selected</p>
         )}
         <button
           className="mint-button kasumi"

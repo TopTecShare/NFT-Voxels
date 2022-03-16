@@ -9,10 +9,13 @@ import PresaleWait from "./pages/presalewait";
 import PublicSaleMint from "./pages/publicsalemint";
 import Staking from "./pages/staking";
 import Burning from "./pages/burning";
+import { useLocation } from "react-router-dom";
 
 const StakingNav = () => {
-  const [isBurning, setIsBurning] = useState(true);
-  const [isStaking, setIsStaking] = useState(false);
+  const location = useLocation();
+  const isBuringURL = location.pathname.startsWith("/burning");
+  const [isBurning, setIsBurning] = useState(isBuringURL);
+  const [isStaking, setIsStaking] = useState(!isBuringURL);
 
   const IsBurning = () => {
     if (!isBurning) {
