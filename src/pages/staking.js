@@ -207,7 +207,7 @@ const Staking = () => {
       </div>
       <div className={unStake ? "show-unstake" : "hide"}>
         {!!unstakeSelects.length && (
-          <p className="agency ">Cube {unstakeSelects} has been selected</p>
+          <p className="agency ">Voxel {unstakeSelects} has been selected</p>
         )}
         <button className="mint-button kasumi" onClick={handleUnstake}>
           UNSTAKE

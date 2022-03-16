@@ -35,7 +35,7 @@ export function useStakedTokens(address) {
     args: [address],
   }) ?? [[]];
 
-  return tokens;
+  return tokens.map((token) => Number(token.toString()));
 }
 
 export function useCalculateRewards(address, tokenIds) {
