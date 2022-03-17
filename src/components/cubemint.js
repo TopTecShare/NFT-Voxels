@@ -83,31 +83,45 @@ export default function Cubemint({ isPublic = false }) {
         return;
 
       case WHITELIST.AMOUNT:
-        const estimateGas = await whitelistAmountGas(
-          mintAmount,
-          MERKLE_TREE_DATA_3[account].leaf,
-          MERKLE_TREE_DATA_3[account].proof,
-          { value: mintCost }
-        );
-        whitelistAmountMint(
-          mintAmount,
-          MERKLE_TREE_DATA_3[account].leaf,
-          MERKLE_TREE_DATA_3[account].proof,
-          { value: mintCost, gasLimit: estimateGas }
-        );
+        try {
+          const estimateGas = await whitelistAmountGas(
+            mintAmount,
+            MERKLE_TREE_DATA_3[account].leaf,
+            MERKLE_TREE_DATA_3[account].proof,
+            { value: mintCost }
+          );
+          whitelistAmountMint(
+            mintAmount,
+            MERKLE_TREE_DATA_3[account].leaf,
+            MERKLE_TREE_DATA_3[account].proof,
+            { value: mintCost, gasLimit: estimateGas }
+          );
+        } catch (error) {
+          toast.error(formatError(error.error.message), {
+            position: toast.POSITION.TOP_RIGHT,
+            hideProgressBar: true,
+          });
+        }
         return;
 
       case WHITELIST.SELECTION:
-        const estimatedGas = await whitelistSelectionGas(
-          MERKLE_TREE_DATA_1[account].leaf,
-          MERKLE_TREE_DATA_1[account].proof,
-          { value: mintCost }
-        );
-        whitelistSelectionMint(
-          MERKLE_TREE_DATA_1[account].leaf,
-          MERKLE_TREE_DATA_1[account].proof,
-          { value: mintCost, gasLimit: estimatedGas }
-        );
+        try {
+          const estimatedGas = await whitelistSelectionGas(
+            MERKLE_TREE_DATA_1[account].leaf,
+            MERKLE_TREE_DATA_1[account].proof,
+            { value: mintCost }
+          );
+          whitelistSelectionMint(
+            MERKLE_TREE_DATA_1[account].leaf,
+            MERKLE_TREE_DATA_1[account].proof,
+            { value: mintCost, gasLimit: estimatedGas }
+          );
+        } catch (error) {
+          toast.error(formatError(error.error.message), {
+            position: toast.POSITION.TOP_RIGHT,
+            hideProgressBar: true,
+          });
+        }
         return;
       default:
         break;
@@ -122,8 +136,15 @@ export default function Cubemint({ isPublic = false }) {
 
   const onPublicMint = async () => {
     const mintCost = parseEther(`${mintPrice}`);
-    const estimatedGas = await publicMintGas(mintAmount, { value: mintCost });
-    publicMint(mintAmount, { value: mintCost, gasLimit: estimatedGas });
+    try {
+      const estimatedGas = await publicMintGas(mintAmount, { value: mintCost });
+      publicMint(mintAmount, { value: mintCost, gasLimit: estimatedGas });
+    } catch (error) {
+      toast.error(formatError(error.error.message), {
+        position: toast.POSITION.TOP_RIGHT,
+        hideProgressBar: true,
+      });
+    }
   };
 
   useEffect(() => {

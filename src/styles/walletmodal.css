@@ -107,4 +107,9 @@
   font-size: 14px;
   font-weight: 500;
   margin-top: 10px;
+  font-family: "Kasumi";
+  border: 1px solid black;
+  border-radius: 0;
+  padding: 12px 20px !important;
+  height: initial;
 }

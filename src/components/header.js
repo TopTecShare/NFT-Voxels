@@ -25,7 +25,7 @@ export default function Header() {
         </Link>
         <div className="header-r">
           {account ? (
-            <div className="wallet-info">
+            <div className="wallet-info" onClick={() => setOpen(true)}>
               <div>
                 <span className="agency balance">
                   Balance: {formatAmount(balance, 18, 4)} ETH

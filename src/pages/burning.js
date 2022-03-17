@@ -10,10 +10,12 @@ import {
   useTokens,
 } from "../hooks/useVoxelsNFT";
 import { useEffect, useMemo, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import "../styles/burning.css";
 
 const Burning = () => {
+  const navigate = useNavigate();
   const { account } = useEthers();
   const tokens = useTokens(account);
   const tokenBalance = useTokenBalance(WIRE_TOKEN, account);
@@ -48,7 +50,7 @@ const Burning = () => {
   const onGenesisMint = () => {
     const unselected = burnSelected.indexOf(0);
     if (unselected !== -1) {
-      toast.error(`You should select Cube ${unselected + 1}!`, {
+      toast.error(`You should select Voxel Class ${unselected + 1}!`, {
         position: toast.POSITION.TOP_RIGHT,
         hideProgressBar: true,
       });
@@ -76,6 +78,18 @@ const Burning = () => {
     }
   }, [burnState]);
 
+  const isEligible = useMemo(() => {
+    for (let idx = 0; idx < 3; idx++) {
+      const cubeTokens = tokens.filter(
+        (tokenId) => tokenId >= idx * 2121 + 1 && tokenId <= (idx + 1) * 2121
+      );
+      if (!cubeTokens.length) {
+        return false;
+      }
+    }
+    return true;
+  }, [tokens]);
+
   return (
     <div className="burning">
       <div className="voxel-box">
@@ -83,7 +97,12 @@ const Burning = () => {
           <p className="agency balance">
             Balance: {formatAmount(tokenBalance)} WIRE
           </p>
-          <img src={refresh} className="refresh" alt="refresh" />
+          <img
+            src={refresh}
+            className="refresh"
+            alt="refresh"
+            onClick={() => navigate(0)}
+          />
         </div>
         <div className="voxel-sections">
           {[...Array(3).keys()].map((idx) => {
@@ -93,33 +112,43 @@ const Burning = () => {
             );
             return (
               <div className="section" key={idx}>
-                <p>CUBE {idx + 1}</p>
+                <p>Voxel Class {idx + 1}</p>
                 <div className="flex voxel-pos">
-                  {cubeTokens.map((tokenId) => {
-                    const burnTokenId =
-                      burnSelected[Math.floor((tokenId - 1) / 2121)];
-                    return (
-                      <Box
-                        onSelect={(selected) => onBurnSelect(tokenId, selected)}
-                        key={tokenId}
-                        allowed={burnTokenId === 0 || burnTokenId === tokenId}
-                      >
-                        {formatCubeId(tokenId)}
-                      </Box>
-                    );
-                  })}
+                  {!cubeTokens.length ? (
+                    <p className="voxel-info-center">
+                      Buy another Voxel on OpenSea.
+                    </p>
+                  ) : (
+                    cubeTokens.map((tokenId) => {
+                      const burnTokenId =
+                        burnSelected[Math.floor((tokenId - 1) / 2121)];
+                      return (
+                        <Box
+                          onSelect={(selected) =>
+                            onBurnSelect(tokenId, selected)
+                          }
+                          key={tokenId}
+                          allowed={burnTokenId === 0 || burnTokenId === tokenId}
+                        >
+                          {formatCubeId(tokenId)}
+                        </Box>
+                      );
+                    })
+                  )}
                 </div>
               </div>
             );
           })}
         </div>
         <p className="balance agency">
-          * Eligible for burn. Select one Cube from EACH group. *
+          {!isEligible
+            ? `* Not eligible for burn. Must own a Voxel from EACH group. *`
+            : `* Eligible for burn. Select one Voxel from EACH group. *`}
         </p>
       </div>
       <div>
         {!!burnSelects.length && (
-          <p className="agency select-cube">Cube {burnSelects} selected</p>
+          <p className="agency select-cube">Voxel {burnSelects} selected</p>
         )}
       </div>
       <div>

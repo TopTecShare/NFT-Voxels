@@ -11,6 +11,7 @@ import Claim from "../components/claim";
 import Bar from "../components/progressbar";
 import { formatCubeId, formatError } from "../global/utils";
 import { useEthers } from "@usedapp/core";
+import { useNavigate, useLocation } from "react-router-dom";
 import {
   useBalance,
   useGetApprovedForAll,
@@ -27,9 +28,19 @@ import {
 import { VOXELS_STAKING } from "../global/constants";
 
 const Staking = () => {
-  const [stake, setStake] = useState(true);
-  const [unStake, setUnStake] = useState(false);
-  const [claim, setClaim] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const [stake, setStake] = useState(
+    !location.pathname.startsWith("/staking/unstake") &&
+      !location.pathname.startsWith("/staking/claim")
+  );
+  const [unStake, setUnStake] = useState(
+    location.pathname.startsWith("/staking/unstake")
+  );
+  const [claim, setClaim] = useState(
+    location.pathname.startsWith("/staking/claim")
+  );
 
   const [stakeSelected, setStakeSelected] = useState([]);
   const [unstakeSelected, setUnstakeSelected] = useState([]);
@@ -172,7 +183,12 @@ const Staking = () => {
           </Link>
         </div>
         <div className="voxel-box-title">
-          <img src={refresh} className="refresh" alt="refresh" />
+          <img
+            src={refresh}
+            className="refresh"
+            alt="refresh"
+            onClick={() => navigate(0)}
+          />
         </div>
         <Routes>
           <Route
