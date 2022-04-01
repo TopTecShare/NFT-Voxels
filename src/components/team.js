@@ -9,7 +9,7 @@ const TeamContent = ({ h2, p, children }) => {
   return (
     <div className="tmcontent agency">
       <div className="flex">
-        <img src={profile}></img>
+        <img src={profile} />
       </div>
       <div className="text">
         <h2>{h2}</h2>
@@ -22,7 +22,7 @@ const TeamContent = ({ h2, p, children }) => {
 
 const Team = () => {
   return (
-    <div className="team kasumi">
+    <div className="team">
       <h1>THE TEAM</h1>
       <div className="linebox">
         <div className="line"></div>
@@ -33,7 +33,7 @@ const Team = () => {
           p="Senior frontend developer and blockchain expert"
         >
           <a href="https://twitter.com">
-            <img src={twitter}></img>
+            <img src={twitter} alt="twitter" />
           </a>
         </TeamContent>
 
@@ -42,22 +42,10 @@ const Team = () => {
           p="Senior frontend developer and blockchain expert"
         >
           <a href="https://twitter.com">
-            <img src={linkedin}></img>
+            <img src={linkedin} alt="linkedin" />
           </a>
           <a href="https://twitter.com">
-            <img src={github}></img>
-          </a>
-        </TeamContent>
-
-        <TeamContent
-          h2="John Doe"
-          p="Senior frontend developer and blockchain expert"
-        >
-          <a href="https://twitter.com">
-            <img src={twitter}></img>
-          </a>
-          <a href="https://twitter.com">
-            <img src={github}></img>
+            <img src={github} alt="github" />
           </a>
         </TeamContent>
 
@@ -66,19 +54,10 @@ const Team = () => {
           p="Senior frontend developer and blockchain expert"
         >
           <a href="https://twitter.com">
-            <img src={twitter}></img>
+            <img src={twitter} alt="twitter" />
           </a>
           <a href="https://twitter.com">
-            <img src={github}></img>
-          </a>
-        </TeamContent>
-
-        <TeamContent
-          h2="John Doe"
-          p="Senior frontend developer and blockchain expert"
-        >
-          <a href="https://twitter.com">
-            <img src={twitter}></img>
+            <img src={github} alt="github" />
           </a>
         </TeamContent>
 
@@ -87,7 +66,10 @@ const Team = () => {
           p="Senior frontend developer and blockchain expert"
         >
           <a href="https://twitter.com">
-            <img src={twitter}></img>
+            <img src={twitter} alt="twitter" />
+          </a>
+          <a href="https://twitter.com">
+            <img src={github} alt="github" />
           </a>
         </TeamContent>
 
@@ -96,10 +78,7 @@ const Team = () => {
           p="Senior frontend developer and blockchain expert"
         >
           <a href="https://twitter.com">
-            <img src={twitter}></img>
-          </a>
-          <a href="https://twitter.com">
-            <img src={linkedin}></img>
+            <img src={twitter} alt="twitter" />
           </a>
         </TeamContent>
 
@@ -108,10 +87,31 @@ const Team = () => {
           p="Senior frontend developer and blockchain expert"
         >
           <a href="https://twitter.com">
-            <img src={twitter}></img>
+            <img src={twitter} alt="twitter" />
+          </a>
+        </TeamContent>
+
+        <TeamContent
+          h2="John Doe"
+          p="Senior frontend developer and blockchain expert"
+        >
+          <a href="https://twitter.com">
+            <img src={twitter} alt="twitter" />
           </a>
           <a href="https://twitter.com">
-            <img src={www}></img>
+            <img src={linkedin} alt="linkedin" />
+          </a>
+        </TeamContent>
+
+        <TeamContent
+          h2="John Doe"
+          p="Senior frontend developer and blockchain expert"
+        >
+          <a href="https://twitter.com">
+            <img src={twitter} alt="twitter" />
+          </a>
+          <a href="https://twitter.com">
+            <img src={www} alt="www" />
           </a>
         </TeamContent>
       </div>

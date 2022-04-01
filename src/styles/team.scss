@@ -1,8 +1,5 @@
 .team {
-  background-color: #171514;
-  h1 {
-    text-align: center;
-  }
+  padding-top: 10em;
 
   .container {
     padding: 0 3%;
@@ -37,10 +34,6 @@
     .text {
       padding: 0.5em 3px 1.5em 3px;
       line-height: 1em;
-
-      h1 {
-        font-size: 3em;
-      }
 
       .children {
         a {

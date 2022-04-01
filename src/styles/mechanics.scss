@@ -1,0 +1,62 @@
+.mechanics {
+  background: url(../imgs/bg.png);
+  background-size: cover;
+
+  .mscontent {
+    display: flex;
+    justify-content: center;
+    padding: 5em;
+    .container {
+      width: 35%;
+      text-align: left;
+      h2,
+      h3,
+      p {
+        margin: 0;
+        font-size: 2em;
+      }
+
+      h2 {
+        color: #8382be;
+      }
+      h3 {
+        font-style: italic;
+      }
+      p {
+        font-weight: 100;
+        font-style: italic;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+          "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+          "Helvetica Neue", sans-serif;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      @media screen and (max-width: 1440px) {
+        width: 50%;
+      }
+
+      @media screen and (max-width: 1024px) {
+        width: 70%;
+      }
+
+      @media screen and (max-width: 768px) {
+        width: 70%;
+      }
+
+      @media screen and (max-width: 600px) {
+        width: 90%;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 12px;
+  }
+
+  @media screen and (max-width: 600px) {
+    font-size: 10px;
+  }
+}
