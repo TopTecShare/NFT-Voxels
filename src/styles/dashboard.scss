@@ -1,0 +1,12 @@
+.dashboard {
+  color: white;
+  .linebox {
+    display: flex;
+    justify-content: center;
+
+    .line {
+      width: 5%;
+      border: 3px solid white;
+    }
+  }
+}
