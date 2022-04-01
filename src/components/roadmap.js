@@ -1,8 +1,8 @@
-import img1 from "../imgs/1.png";
-import img2 from "../imgs/2.png";
-import img3 from "../imgs/3.png";
-import img4 from "../imgs/4.png";
-import img5 from "../imgs/5.png";
+import img1 from "../img/1.png";
+import img2 from "../img/2.png";
+import img3 from "../img/3.png";
+import img4 from "../img/4.png";
+import img5 from "../img/5.png";
 import "../styles/roadmap.scss";
 
 const RoadmapElement = ({ h2, className, children }) => {
@@ -26,7 +26,9 @@ const RoadmapContent = ({ h2, children }) => {
       <div className="dash">
         <DottedLine />
       </div>
-      <div className="arrow"><div></div></div>
+      <div className="arrow">
+        <div></div>
+      </div>
     </div>
   );
 };

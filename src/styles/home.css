@@ -15,14 +15,16 @@
     width: 60%;
   }
 } */
-
+.cube {
+  height: calc(90vh - 12rem);
+}
 .home {
   margin: 300px 0 0 0;
 }
 
 @media (max-width: 1440px) {
   .home {
-    margin: 300px 0 250px 0;
+    margin: 300px 0 0 0;
   }
 }
 

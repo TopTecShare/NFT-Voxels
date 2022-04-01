@@ -1,5 +1,5 @@
 import "../styles/mechanics.scss";
-import box from "../imgs/box.png";
+import box from "../img/box.png";
 
 const MechanicsContent = ({ h2, h3, children }) => {
   return (

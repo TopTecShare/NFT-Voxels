@@ -1,9 +1,9 @@
 import "../styles/team.scss";
-import twitter from "../imgs/twitter.png";
-import linkedin from "../imgs/linkedin.png";
-import github from "../imgs/github.png";
-import www from "../imgs/www.png";
-import profile from "../imgs/profile.png";
+import twitter from "../img/twitter copy.png";
+import linkedin from "../img/linkedin.png";
+import github from "../img/github.png";
+import www from "../img/www.png";
+import profile from "../img/profile.png";
 
 const TeamContent = ({ h2, p, children }) => {
   return (
