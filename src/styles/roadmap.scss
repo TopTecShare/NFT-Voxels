@@ -1,5 +1,121 @@
-.roadmap{
-    .dotted{
-        width:0;
+.roadmap {
+  padding-top: 6em;
+  .dotted {
+    width: 0;
+  }
+  .margin-control {
+    margin: 3em 0 8em 0;
+    .flex {
+      display: flex;
+      padding: 0 20% 0 15%;
+
+      @media screen and (max-width: 1440px) {
+        padding: 0 15% 0 10%;
+      }
+
+      .rdcontent {
+        margin-right: 4em;
+        img {
+          width: 10em;
+        }
+
+        h2 {
+          margin: 0.3em;
+          font-size: 1.5em;
+        }
+
+        .dash {
+          display: flex;
+          justify-content: center;
+          position: relative;
+          height: calc(100% - 16em);
+          margin: 1em 0;
+          overflow: hidden;
+        }
+        .dotted {
+          width: 0;
+          height: 100%;
+          border: 2px dashed white;
+          transform: scaleY(4);
+        }
+      }
+
+      .maxWidth {
+        width: 100%;
+        .rdelement {
+          padding: 0.5em 2.5em;
+          margin-bottom: 3em;
+          text-align: left;
+
+          border: 3px solid #716c6b;
+          border-radius: 1em;
+
+          h2 {
+            font-size: 2.5em;
+            margin-bottom: 0.3em;
+          }
+          p {
+            font-size: 2em;
+            margin-top: 0.1em;
+
+            @media screen and (max-width: 600px) {
+              font-size: 2.5em;
+            }
+          }
+        }
+        .year {
+          color: #221e1c;
+          background-color: #5cc3b3;
+          border-radius: 1em 1em 0 0;
+          text-align: left;
+          width: fit-content;
+          padding: 0.3em 1em;
+          font-size: 2em;
+        }
+        .border-blue-2022,
+        .border-blue-2023 {
+          border: 5px solid #5cc3b3;
+          border-radius: 0em 1em 1em 1em;
+        }
+
+        .border-blue {
+          border: 5px solid #5cc3b3;
+        }
+
+        .border-red {
+          border: 5px solid #f37880;
+        }
+      }
     }
+
+    .last {
+      .arrow {
+        display: flex;
+        justify-content: center;
+        margin: -2.8em;
+        div {
+          width: 1.5em;
+          height: 1.5em;
+          border: 3px solid white;
+          border-top: none;
+          border-left: none;
+          transform: rotate(45deg);
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 12px;
+  }
+
+  @media screen and (max-width: 600px) {
+    p {
+      font-size: 2.5em;
+    }
+    font-size: 10px;
+  }
+
+  @media screen and (max-width: 500px) {
+    font-size: 6px;
+  }
 }

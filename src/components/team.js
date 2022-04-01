@@ -13,7 +13,7 @@ const TeamContent = ({ h2, p, children }) => {
       </div>
       <div className="text">
         <h2>{h2}</h2>
-        <p>{p}</p>
+        <p className="agencyr">{p}</p>
         <div className="children">{children}</div>
       </div>
     </div>

@@ -22,10 +22,20 @@ code {
   src: local("Agency"), url(./fonts/Agency.ttf) format("truetype");
 }
 
+@font-face {
+  font-family: "AgencyR";
+  src: local("AgencyR"), url(./fonts/agencyr.ttf) format("truetype");
+}
+
+
 .kasumi {
   font-family: "Kasumi";
 }
 
 .agency {
   font-family: "Agency";
+}
+
+.agencyr {
+  font-family: "AgencyR";
 }

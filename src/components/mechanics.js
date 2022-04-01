@@ -10,7 +10,7 @@ const MechanicsContent = ({ h2, h3, children }) => {
         </div>
         <h2>{h2}</h2>
         <h3 className="agency">{h3}</h3>
-        <p className="agency">{children}</p>
+        <p className="agencyr">{children}</p>
       </div>
     </div>
   );
