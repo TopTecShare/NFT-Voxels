@@ -1,0 +1,30 @@
+.dashboard {
+  letter-spacing: 2px;
+  p {
+    letter-spacing: 1px;
+  }
+  background-color: #171514;
+  text-align: center;
+  color: white;
+  .linebox {
+    display: flex;
+    justify-content: center;
+
+    .line {
+      width: 5em;
+      border: 2px solid white;
+    }
+  }
+
+  h1 {
+    margin: 0 0 0.2em 0;
+    font-size: 3em;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 12px;
+  }
+
+  @media screen and (max-width: 600px) {
+    font-size: 10px;
+  }
+}

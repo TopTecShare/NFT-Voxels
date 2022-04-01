@@ -1,4 +1,4 @@
-import logo from "../img/Voxels Logo.png";
+// import logo from "../img/Voxels Logo.png";
 import { Link } from "react-router-dom";
 import { shortenAddress, useEtherBalance, useEthers } from "@usedapp/core";
 import { useState } from "react";

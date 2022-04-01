@@ -1,4 +1,4 @@
-import voxels from "../img/Main Cube.png";
+// import voxels from "../img/Main Cube.png";
 import { parseEther } from "@ethersproject/units";
 import { toast } from "react-toastify";
 import Bar from "./progressbar";
