@@ -184,7 +184,9 @@ export default function Cubemint({ isPublic = false }) {
                 -
               </button>
             )}
-          <a className="value agency">{mintAmount}</a>
+          <a className="value agency" href="/">
+            {mintAmount}
+          </a>
           {!isPublic &&
             whitelistType === WHITELIST.AMOUNT &&
             (remaining || !amountUsed) && (

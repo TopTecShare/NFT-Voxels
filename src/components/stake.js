@@ -1,6 +1,6 @@
 import Box from "./box";
 
-import "../styles/burning.css";
+import "../styles/burning.scss";
 import { formatCubeId } from "../global/utils";
 
 export default function Stake({ onCubeSelect, tokens }) {

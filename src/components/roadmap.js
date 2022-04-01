@@ -45,7 +45,7 @@ const Roadmap = () => {
         <div className="line"></div>
       </div>
       <div className="margin-control">
-        <div className="flex">
+        <div className="flexed">
           <RoadmapContent h2="Q1, '22">
             <div>
               <img src={img1} alt="img1" />
@@ -83,7 +83,7 @@ const Roadmap = () => {
           </div>
         </div>
 
-        <div className="flex">
+        <div className="flexed">
           <RoadmapContent h2="Q2, '22">
             <div>
               <img src={img2} alt="img2" />
@@ -125,7 +125,7 @@ const Roadmap = () => {
             </RoadmapElement>
           </div>
         </div>
-        <div className="flex">
+        <div className="flexed">
           <RoadmapContent h2="Q3, '22">
             <div>
               <img src={img3} alt="img3" />
@@ -147,7 +147,7 @@ const Roadmap = () => {
             </RoadmapElement>
           </div>
         </div>
-        <div className="flex">
+        <div className="flexed">
           <RoadmapContent h2="Q4, '22">
             <div>
               <img src={img4} alt="img4" />
@@ -163,7 +163,7 @@ const Roadmap = () => {
             </RoadmapElement>
           </div>
         </div>
-        <div className="flex last">
+        <div className="flexed last">
           <RoadmapContent h2="2023+">
             <div>
               <img src={img5} alt="img5" />

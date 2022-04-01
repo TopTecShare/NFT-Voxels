@@ -12,7 +12,7 @@ import {
 import { useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import "../styles/burning.css";
+import "../styles/burning.scss";
 
 const Burning = () => {
   const navigate = useNavigate();
