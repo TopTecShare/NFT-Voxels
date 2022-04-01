@@ -54,7 +54,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route
+        {/* <Route
           path="/staking/*"
           element={
             <>
@@ -74,7 +74,7 @@ function App() {
         />
         <Route path="/presalemint" element={<PresaleMint />} />
         <Route path="/presalewait" element={<PresaleWait />} />
-        <Route path="/publicsalemint" element={<PublicSaleMint />} />
+        <Route path="/publicsalemint" element={<PublicSaleMint />} /> */}
       </Routes>
     </div>
   );
