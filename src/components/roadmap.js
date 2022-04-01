@@ -8,8 +8,8 @@ import "../styles/roadmap.scss";
 const RoadmapElement = ({ h2, className, children }) => {
   return (
     <div>
-      {className == "border-blue-2022" && <div className="year">2022</div>}
-      {className == "border-blue-2023" && <div className="year">2023</div>}
+      {className === "border-blue-2022" && <div className="year">2022</div>}
+      {className === "border-blue-2023" && <div className="year">2023</div>}
       <div className={`rdelement ${className}`}>
         <h2>{h2}</h2>
         <div className="agencyr">{children}</div>

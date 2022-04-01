@@ -9,7 +9,7 @@ const TeamContent = ({ h2, p, children }) => {
   return (
     <div className="tmcontent agency">
       <div className="flex">
-        <img src={profile} />
+        <img src={profile} alt="profile" />
       </div>
       <div className="text">
         <h2>{h2}</h2>
