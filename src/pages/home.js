@@ -1,5 +1,5 @@
 // import Cube from "../components/cube"
-import Dashboard from "../components/dashboard";
+// import Dashboard from "../components/dashboard";
 import "../styles/home.css";
 
 const Home = () => {
