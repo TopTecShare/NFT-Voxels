@@ -120,6 +120,12 @@ footer div {
   bottom: 50px;
   right: 50px;
 }
+
+@media screen and (min-width: 320px) {
+  footer div {
+    right: inherit;
+  }
+}
 footer a {
   margin: 0 15px;
 }
@@ -145,13 +151,13 @@ footer img {
     /* margin-top: 100px; */
   }
 
-  footer div {
+  /* footer div {
     position: inherit;
     display: flex;
     z-index: 100;
     bottom: 50px;
     right: 50px;
-  }
+  } */
 
   .wallet-info {
     flex-wrap: wrap;
