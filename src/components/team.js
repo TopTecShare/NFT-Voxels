@@ -25,7 +25,7 @@ const Team = () => {
     <div className="team">
       <h1>THE TEAM</h1>
       <div className="linebox">
-        <div className="line"></div>
+        <div className="liner"></div>
       </div>
       <div className="container">
         <TeamContent

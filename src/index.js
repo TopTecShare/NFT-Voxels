@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import { ChainId, DAppProvider, Mainnet, Rinkeby } from "@usedapp/core";
 import { ToastContainer } from "react-toastify";
@@ -15,6 +15,10 @@ import { infuraUrl } from "./global/utils";
 import "react-toastify/dist/ReactToastify.css";
 
 const Video = () => {
+  const videoRef = useRef(undefined);
+  useEffect(() => {
+    videoRef.current.defaultMuted = true;
+  });
   const userImageLink =
     "https://ipfs.io/ipfs/QmNPSSUAu5f4Zw8ojbvaEZWqvc1ytzZmvovWa8mepQEBhd";
   const downloadSize = 83131;
@@ -49,7 +53,7 @@ const Video = () => {
     }
   };
   return (
-    <video autoPlay loop muted id="video">
+    <video autoPlay loop muted id="video" ref={videoRef}>
       {flag ? <source src={backgroundVideo} type="video/mp4" /> : <></>}
     </video>
   );

@@ -42,7 +42,7 @@ const Roadmap = () => {
     <div className="roadmap">
       <h1>ROADMAP</h1>
       <div className="linebox">
-        <div className="line"></div>
+        <div className="liner"></div>
       </div>
       <div className="margin-control">
         <div className="flexed">

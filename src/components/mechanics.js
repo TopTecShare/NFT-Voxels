@@ -21,7 +21,7 @@ const Mechanics = () => {
     <div className="mechanics">
       <h1>THE MECHANICS</h1>
       <div className="linebox">
-        <div className="line"></div>
+        <div className="liner"></div>
       </div>
       <MechanicsContent h2="DISCOVERY" h3="The Birth">
         Receive your Genesis Voxel.
