@@ -1,11 +1,12 @@
 .mechanics {
   background: url(../img/bg.png);
+  padding-bottom: 15em;
 
-  padding: 7em 0;
   .mscontent {
     display: flex;
     justify-content: center;
     padding: 5em;
+
     .container {
       width: 35%;
       text-align: left;
