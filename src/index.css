@@ -21,6 +21,10 @@ body {
   bottom: 0;
 }
 
+video::-webkit-media-controls {
+  display: none !important;
+}
+
 @font-face {
   font-family: "Kasumi";
   src: local("Kasumi"), url(./fonts/Kasumi_Regular.otf) format("opentype");
