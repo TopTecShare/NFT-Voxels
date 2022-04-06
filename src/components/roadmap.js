@@ -91,8 +91,8 @@ const Roadmap = () => {
           </RoadmapContent>
           <div className="maxWidth">
             <RoadmapElement h2="MINT" className="border-red">
-              <p>Pre-Sale: April TBA</p>
-              <p>Public: April TBA</p>
+              <p>Pre-Sale: Early April TBA</p>
+              <p>Public: Early April TBA</p>
             </RoadmapElement>
             <RoadmapElement h2="$WIRE CLAIM">
               <p>
