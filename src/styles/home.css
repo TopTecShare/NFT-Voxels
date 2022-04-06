@@ -16,7 +16,7 @@
   }
 } */
 .cube {
-  height: calc(90vh - 12rem);
+  height: calc(90vh - 13.2rem);
 }
 .home {
   margin: 300px 0 0 0;
