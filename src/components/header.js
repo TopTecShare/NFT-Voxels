@@ -1,8 +1,9 @@
 // import logo from "../img/Voxels Logo.png";
 import { Link } from "react-router-dom";
-import { shortenAddress, useEtherBalance, useEthers } from "@usedapp/core";
+import { useEtherBalance, useEthers } from "@usedapp/core";
+// import { shortenAddress } from "@usedapp/core";
 import { useState } from "react";
-import { formatAmount } from "../global/utils";
+// import { formatAmount } from "../global/utils";
 import WalletConnectionModal from "./walletmodal";
 
 export default function Header() {
@@ -23,7 +24,7 @@ export default function Header() {
             <span className="kasumi logo-r">NFT</span>
           </div>
         </Link>
-        <div className="header-r">
+        {/* <div className="header-r">
           {account ? (
             <div className="wallet-info" onClick={() => setOpen(true)}>
               <div>
@@ -45,7 +46,7 @@ export default function Header() {
               <span>CONNECT WALLET</span>
             </div>
           )}
-        </div>
+        </div> */}
       </div>
     </header>
   );
