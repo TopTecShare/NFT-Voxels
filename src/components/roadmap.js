@@ -39,7 +39,7 @@ const DottedLine = () => {
 
 const Roadmap = () => {
   return (
-    <div className="roadmap">
+    <div className="roadmap" id="roadmap">
       <h1>ROADMAP</h1>
       <div className="linebox">
         <div className="liner"></div>

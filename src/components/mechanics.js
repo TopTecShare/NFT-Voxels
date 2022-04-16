@@ -18,7 +18,7 @@ const MechanicsContent = ({ h2, h3, children }) => {
 
 const Mechanics = () => {
   return (
-    <div className="mechanics">
+    <div className="mechanics"  id="mechanics">
       <h1>THE MECHANICS</h1>
       <div className="linebox">
         <div className="liner"></div>

@@ -3,6 +3,7 @@ body {
   color: white;
   font-size: 18px;
   line-height: 1.4;
+  padding: 0 !important;
 }
 
 .App {
@@ -12,6 +13,52 @@ body {
 .mobile-style {
   display: none;
 }
+
+.menu{
+  background-color: rgb(30 30 30);
+  padding:1em;
+}
+
+.menu-modal{
+  margin-top: 9rem;
+  margin-left:3rem;
+  width:21rem;
+}
+
+.menu p{
+  margin:1em;
+  padding:0 5em;
+}
+
+.menu a{
+  text-decoration: none;
+  color:white;
+  font-size: 1.5em;
+}
+
+
+@media only screen and (max-width: 712px) {
+  .menu-modal{
+    margin-top: 12rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .menu-modal{
+    margin-top: 12rem;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+  }
+
+  .menu p{
+    margin:1em;
+    padding:0 1em;
+    display: flex;
+    justify-content: center;
+  }
+}
+
 
 .header {
   background-color: #3d3d3d;
@@ -111,21 +158,14 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 100;
 }
+
 
 footer div {
-  position: fixed;
   display: flex;
-  z-index: 100;
-  bottom: 50px;
-  right: 50px;
 }
 
-@media screen and (max-width: 320px) {
-  footer div {
-    right: inherit;
-  }
-}
 footer a {
   margin: 0 15px;
 }

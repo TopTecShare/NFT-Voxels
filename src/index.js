@@ -7,8 +7,6 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
-import Header from "./components/header";
-import Footer from "./components/footer";
 import backgroundVideo from "./video/background.mp4";
 import { infuraUrl } from "./global/utils";
 
@@ -72,10 +70,8 @@ const config = {
 ReactDOM.render(
   <Router>
     <DAppProvider config={config}>
-      <Header />
       <App />
       <ToastContainer />
-      <Footer />
       <Video />
     </DAppProvider>
   </Router>,

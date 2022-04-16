@@ -6,7 +6,12 @@ import { useState } from "react";
 // import { formatAmount } from "../global/utils";
 import WalletConnectionModal from "./walletmodal";
 
-export default function Header() {
+import opensea from "../img/OpenSea.png";
+import discord from "../img/Discord.png";
+import twitter from "../img/Twitter.png";
+import menu from "../img/menu.png";
+
+export default function Header({ openMenu }) {
   const [open, setOpen] = useState(false);
   // const { account } = useEthers();
   // const balance = useEtherBalance(account);
@@ -14,6 +19,30 @@ export default function Header() {
   return (
     <header>
       <div className="header">
+        <footer>
+          <div>
+            <div onClick={() => openMenu(true)}>
+              <img src={menu} alt="menu" style={{ cursor: "pointer" }} />
+            </div>
+            <a href="/" target="_blank">
+              <img src={opensea} alt="opensea" />
+            </a>
+            <a
+              href="https://discord.gg/voxelsnft"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={discord} alt="discord" />
+            </a>
+            <a
+              href="https://twitter.com/Voxels_NFT"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={twitter} alt="twitter" />
+            </a>
+          </div>
+        </footer>
         <WalletConnectionModal open={open} onClose={() => setOpen(false)} />
         <Link to="/" className="header-l">
           {/* <a href="#" className="connect-wallet kasumi ">
