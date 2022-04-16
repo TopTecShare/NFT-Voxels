@@ -47,11 +47,11 @@ const Team = () => {
       </div>
       <div className="container">
         {}
-        <TeamContent
-          h2="Gary Bentz"
-          p="Visionary/Strategic Ops"
-          profile={img1}
-        />
+        <TeamContent h2="Gary Bentz" p="Visionary/Strategic Ops" profile={img1}>
+          <a href="https://www.linkedin.com/in/garybentz/">
+            <img src={linkedin} alt="linkedin" />
+          </a>
+        </TeamContent>
 
         <TeamContent h2="mikev2" p="Voxelverse Developer" profile={img2}>
           <a href="https://github.com/mikevercoelen">
