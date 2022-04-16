@@ -101,7 +101,7 @@ function App() {
             <p>
               <a
                 href="https://medium.com/@voxelsnft"
-                target="_blank"
+                target="_blank" rel="noreferrer"
                 onClick={() => setOpen(false)}
               >
                 Medium
@@ -110,7 +110,7 @@ function App() {
             <p>
               <a
                 href="https://whitepaper.voxels-nft.com/"
-                target="_blank"
+                target="_blank" rel="noreferrer"
                 onClick={() => setOpen(false)}
               >
                 Whitepaper
