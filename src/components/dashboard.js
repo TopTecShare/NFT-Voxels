@@ -1,4 +1,4 @@
-// import Team from "./team";
+import Team from "./team";
 import Mechanics from "./mechanics";
 import Roadmap from "./roadmap";
 import "../styles/dashboard.scss";
@@ -8,7 +8,7 @@ const Dashboard = () => {
     <div className="dashboard kasumi">
       <Roadmap />
       <Mechanics />
-      {/* <Team /> */}
+      <Team />
     </div>
   );
 };

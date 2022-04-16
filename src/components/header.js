@@ -1,6 +1,6 @@
 // import logo from "../img/Voxels Logo.png";
 import { Link } from "react-router-dom";
-import { useEtherBalance, useEthers } from "@usedapp/core";
+// import { useEtherBalance, useEthers } from "@usedapp/core";
 // import { shortenAddress } from "@usedapp/core";
 import { useState } from "react";
 // import { formatAmount } from "../global/utils";
@@ -8,8 +8,8 @@ import WalletConnectionModal from "./walletmodal";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
-  const { account } = useEthers();
-  const balance = useEtherBalance(account);
+  // const { account } = useEthers();
+  // const balance = useEtherBalance(account);
 
   return (
     <header>

@@ -18,11 +18,11 @@
     font-size: 20px;
 
     .flex {
-      width: 50%;
+      width: 35%;
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 5px;
+      padding: 15px;
 
       img {
         width: 100%;
@@ -36,6 +36,15 @@
     .text {
       padding: 0.5em 3px 1.5em 3px;
       line-height: 1em;
+
+      h2{
+        margin-bottom:0.5em;
+        margin-top:0;
+        padding-top: 1em;
+      }
+      p{
+        color:#8e8e8e;
+      }
 
       .children {
         a {
