@@ -38,7 +38,7 @@ video::-webkit-media-controls {
 
 @font-face {
   font-family: "AgencyR";
-  src: local("AgencyR"), url(./fonts/agencyr.ttf) format("truetype");
+  src: local("AgencyR"), url(./fonts/AGENCYB.TTF) format("truetype");
 }
 
 .kasumi {

@@ -112,13 +112,17 @@ const Team = () => {
           </a>
         </TeamContent>
 
-        <TeamContent h2="soluvlyy.eth" p="Security Advisor" profile={img12}>
+        <TeamContent
+          h2="soluvlyy.eth"
+          p="Collaboration Council"
+          profile={img12}
+        >
           <a href="https://twitter.com/soluvlyyx">
             <img src={twitter} alt="twitter" />
           </a>
         </TeamContent>
 
-        <TeamContent h2="KingJDiddy" p="Moderator" profile={img13}>
+        <TeamContent h2="KingJDiddy" p="Security Advisor" profile={img13}>
           <a href=" https://twitter.com/KingJDiddy_ETH">
             <img src={twitter} alt="twitter" />
           </a>
