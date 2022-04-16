@@ -1,6 +1,6 @@
 import "../styles/team.scss";
 import twitter from "../img/twitter copy.png";
-// import linkedin from "../img/linkedin.png";
+import linkedin from "../img/linkedin.png";
 import github from "../img/github.png";
 // import www from "../img/www.png";
 import img1 from "../img/imgs/1.png";
@@ -65,7 +65,14 @@ const Team = () => {
           </a>
         </TeamContent>
 
-        <TeamContent h2="Cpivet" p="Solidity Developer" profile={img4} />
+        <TeamContent h2="Cpivet" p="Solidity Developer" profile={img4}>
+          <a href="https://www.linkedin.com/in/ax-5bab1a198/">
+            <img src={linkedin} alt="linkedin" />
+          </a>
+          <a href="https://github.com/devneser">
+            <img src={github} alt="github" />
+          </a>
+        </TeamContent>
 
         <TeamContent h2="kokid951" p="Marketing Advisor" profile={img5}>
           <a href="https://twitter.com/kokid951">
