@@ -63,7 +63,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function App() {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const classes = useStyles();
   return (
     <div className="App">
@@ -101,7 +101,8 @@ function App() {
             <p>
               <a
                 href="https://medium.com/@voxelsnft"
-                target="_blank" rel="noreferrer"
+                target="_blank"
+                rel="noreferrer"
                 onClick={() => setOpen(false)}
               >
                 Medium
@@ -110,7 +111,8 @@ function App() {
             <p>
               <a
                 href="https://whitepaper.voxels-nft.com/"
-                target="_blank" rel="noreferrer"
+                target="_blank"
+                rel="noreferrer"
                 onClick={() => setOpen(false)}
               >
                 Whitepaper
