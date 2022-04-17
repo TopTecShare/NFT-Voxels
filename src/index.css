@@ -38,7 +38,12 @@ video::-webkit-media-controls {
 
 @font-face {
   font-family: "AgencyR";
-  src: local("AgencyR"), url(./fonts/AGENCYB.TTF) format("truetype");
+  src: local("AgencyR"), url(./fonts/AgencyR.ttf.TTF) format("truetype");
+}
+
+@font-face {
+  font-family: "AgencyB";
+  src: local("AgencyB"), url(./fonts/AgencyB.ttf.TTF) format("truetype");
 }
 
 .kasumi {
@@ -51,6 +56,10 @@ video::-webkit-media-controls {
 
 .agencyr {
   font-family: "AgencyR";
+}
+
+.agencyb {
+  font-family: "AgencyB";
 }
 
 .flex {

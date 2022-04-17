@@ -36,6 +36,10 @@ body {
   font-size: 1.5em;
 }
 
+.menu a:hover{
+  color:#8382BE;
+}
+
 
 @media only screen and (max-width: 712px) {
   .menu-modal{
@@ -61,7 +65,7 @@ body {
 
 
 .header {
-  background-color: #3d3d3d;
+  background-color: #3b3b3b;
   justify-content: space-between;
   align-items: center;
   display: flex;
@@ -166,9 +170,21 @@ footer div {
   display: flex;
 }
 
-footer a {
+footer a, span {
   margin: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.social{
+  filter:  brightness(0) invert(1);
+  cursor: pointer;
+}
+.social:hover{
+  filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(180deg) brightness(118%) contrast(119%);
+}
+
 footer img {
   width: 80%;
 }

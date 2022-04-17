@@ -30,7 +30,7 @@ const TeamContent = ({ h2, p, children, profile }) => {
         <img src={profile} alt="profile" />
       </div>
       <div className="text">
-        <h2>{h2}</h2>
+        <h2 className="agencyb">{h2}</h2>
         <p className="agencyr">{p}</p>
         <div className="children">{children}</div>
       </div>
@@ -107,7 +107,7 @@ const Team = () => {
           <a
             target="_blank"
             rel="noreferrer"
-            href="ttps://twitter.com/CloudHopper69"
+            href=" https://twitter.com/CloudHopper69"
           >
             <img src={twitter} alt="twitter" />
           </a>

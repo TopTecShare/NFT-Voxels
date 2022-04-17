@@ -9,7 +9,7 @@ const MechanicsContent = ({ h2, h3, children }) => {
           <img src={box} alt={h3} />
         </div>
         <h2>{h2}</h2>
-        <h3 className="agency">{h3}</h3>
+        <h3 className="agencyb">{h3}</h3>
         <p className="agencyr">{children}</p>
       </div>
     </div>
@@ -18,7 +18,7 @@ const MechanicsContent = ({ h2, h3, children }) => {
 
 const Mechanics = () => {
   return (
-    <div className="mechanics"  id="mechanics">
+    <div className="mechanics" id="mechanics">
       <h1>THE MECHANICS</h1>
       <div className="linebox">
         <div className="liner"></div>
