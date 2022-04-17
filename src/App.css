@@ -15,7 +15,7 @@ body {
 }
 
 .menu{
-  background-color: rgb(30 30 30);
+  background-color: #3b3b3b;
   padding:1em;
 }
 
@@ -182,11 +182,13 @@ footer a, span {
 }
 
 .social{
-  filter:  brightness(0) invert(1);
+  /* filter:  brightness(0) invert(1); */
+  fill: white;
   cursor: pointer;
 }
 .social:hover{
-  filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(180deg) brightness(118%) contrast(119%);
+  /* fill: #8382BE; */
+  filter: invert(55%) sepia(10%) saturate(1353%) hue-rotate(202deg) brightness(95%) contrast(100%);
 }
 
 footer img {
