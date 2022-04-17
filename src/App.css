@@ -14,35 +14,53 @@ body {
   display: none;
 }
 
-.menu{
+.menu {
   background-color: #3b3b3b;
-  padding:1em;
-  position: fixed;
-  left:50%;
-  top:50%;
-  transform: translateX(-50%) translateY(-50%)
-  
+  padding: 1em;
 }
 
-.menu-modal{
+.menu-modal {
   margin-top: 9rem;
-  margin-left:3rem;
-  width:21rem;
+  margin-left: 3rem;
+  width: 21rem;
 }
 
-.menu p{
-  margin:1em;
-  padding:0 5em;
+.menu p {
+  margin: 1em;
+  padding: 0 5em;
+  display: flex;
+  justify-content: center;
 }
 
-.menu a{
+.menu a {
   text-decoration: none;
-  color:white;
+  color: white;
   font-size: 1.5em;
+  text-align: center;
 }
 
-.menu a:hover{
-  color:#8382BE;
+.menu a:hover {
+  color: #8382be;
+}
+
+@media only screen and (max-width: 712px) {
+  .menu-modal {
+    margin-top: 12rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .menu {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .menu p {
+    margin: 1em;
+    padding: 0 1em;
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .header {
@@ -146,26 +164,27 @@ footer {
   z-index: 100;
 }
 
-
 footer div {
   display: flex;
 }
 
-footer a, span {
+footer a,
+span {
   margin: 0 15px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.social{
+.social {
   /* filter:  brightness(0) invert(1); */
   fill: white;
   cursor: pointer;
 }
-.social:hover{
+.social:hover {
   /* fill: #8382BE; */
-  filter: invert(55%) sepia(10%) saturate(1353%) hue-rotate(202deg) brightness(95%) contrast(100%);
+  filter: invert(55%) sepia(10%) saturate(1353%) hue-rotate(202deg)
+    brightness(95%) contrast(100%);
 }
 
 footer img {
